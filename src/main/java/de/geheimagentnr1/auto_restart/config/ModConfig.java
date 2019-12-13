@@ -41,9 +41,12 @@ public class ModConfig {
 		AUTO_START = BUILDER.comment( "Should the Server do Autorestarts?" ).define( "auto_restart", false );
 		RESTART_TIMES = BUILDER.comment( "Times in 24 hour format on with the server will automaticaly restarts." )
 			.define( "restart_times", Arrays.asList( "14:00", "16:32" ), o -> {
+				if( o == null ) {
+					return false;
+				}
 				@SuppressWarnings( "unchecked" )
 				List<String> time_list = (List<String>)o;
-				for( String time : time_list) {
+				for( String time : time_list ) {
 					try {
 						timeStringToRestartTime( time );
 					} catch( Exception exception ) {
