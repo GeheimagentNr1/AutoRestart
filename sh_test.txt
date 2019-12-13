@@ -1,0 +1,43 @@
+# 0 File
+read -r line0 < restart0
+echo "$line0"
+if [ $line0 == "1" ]
+then
+	echo "restart"
+else
+	echo "stop"
+fi
+# 0 File While
+count=0
+while [ $count -le 5 ]
+do
+	read -r line0 < restart0
+	if [ $line0 == "0" ]
+	then
+		echo "stopping"
+		#exit
+	fi
+	let count++
+done
+echo "stopped"
+# 1 File
+read -r line1 < restart1
+echo "$line1"
+if [ $line1 == "1" ]
+then
+	echo "restart"
+else
+	echo "stop"
+fi
+# 1 File While
+count=0
+while [ $count -le 5 ]
+do
+	read -r line1 < restart1
+	if [ $line1 == "0" ]
+	then
+		echo "stopping"
+	fi
+	let count++
+done
+echo "stopped"
