@@ -17,6 +17,7 @@ import java.util.Timer;
 @Mod( AutoRestart.MODID )
 public class AutoRestart {
 	
+	
 	public final static String MODID = "auto_restart";
 	
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -36,14 +37,21 @@ public class AutoRestart {
 	
 	private void handleServerStopped( FMLServerStoppedEvent event ) {
 		
-		if( event.getServer().isDedicatedServer() && ServerRestarter.shouldDoRestart() &&
-			!ModConfig.usesRestartScript() ) {
-			LOGGER.info( "Restart Server" );
-			ProcessBuilder builder = new ProcessBuilder( ModConfig.getRestartCommand() );
-			try {
-				builder.start();
-			} catch( IOException exception ) {
-				LOGGER.error( "Auto Restart could not be done.", exception );
+		if( event.getServer().isDedicatedServer() ) {
+			if( ServerRestarter.shouldDoRestart() ) {
+				if( !ModConfig.usesRestartScript() ) {
+					LOGGER.info( "Restart Server" );
+					ProcessBuilder builder = new ProcessBuilder( ModConfig.getRestartCommand() );
+					try {
+						builder.start();
+					} catch( IOException exception ) {
+						LOGGER.error( "Auto Restart could not be done.", exception );
+					}
+				}
+			} else {
+				if( !event.getServer().isServerRunning() ) {
+					ServerRestarter.createStopFile();
+				}
 			}
 		}
 	}

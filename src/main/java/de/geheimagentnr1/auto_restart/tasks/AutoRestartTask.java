@@ -11,6 +11,7 @@ import java.util.TimerTask;
 
 public class AutoRestartTask extends TimerTask {
 	
+	
 	private final MinecraftServer server;
 	
 	public AutoRestartTask( MinecraftServer _server ) {

@@ -2,6 +2,7 @@ package de.geheimagentnr1.auto_restart.config;
 
 public class RestartTime {
 	
+	
 	private final int hour;
 	
 	private final int minute;

@@ -68,7 +68,6 @@ public class ModConfig {
 	
 	public static void load() {
 		
-		
 		CommentedFileConfig configData = CommentedFileConfig.builder( FMLPaths.CONFIGDIR.get().resolve(
 			AutoRestart.MODID + ".toml" ) ).sync().autosave().writingMode( WritingMode.REPLACE ).build();
 		

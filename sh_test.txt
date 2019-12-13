@@ -1,12 +1,12 @@
 # 0 File
 read -r line0 < restart0
-echo "$line0"
-if [ $line0 == "1" ]
-then
-	echo "restart"
-else
-	echo "stop"
-fi
+  echo "$line0"
+  if [ $line0 == "1" ]
+  then
+  	echo "restart"
+  else
+  	echo "stop"
+  fi
 # 0 File While
 count=0
 while [ $count -le 5 ]

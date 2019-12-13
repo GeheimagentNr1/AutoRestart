@@ -33,17 +33,22 @@ public class ServerRestarter {
 		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
 	}
 	
+	public static void createExceptionFile() {
+		
+		saveToFile( StopType.EXCEPTION );
+	}
+	
 	public static void createStopFile() {
 		
-		saveToFile( false );
+		saveToFile( StopType.STOP );
 	}
 	
 	private static void createRestartFile() {
-	
-		saveToFile( true );
+		
+		saveToFile( StopType.RESTART );
 	}
 	
-	private static void saveToFile( boolean restart ) {
+	private static void saveToFile( StopType type ) {
 		
 		FileWriter fileWriter = null;
 		try {
@@ -51,7 +56,7 @@ public class ServerRestarter {
 				"restart" );
 			if( file.exists() || file.getParentFile().mkdirs() && file.createNewFile() ) {
 				fileWriter = new FileWriter( file );
-				fileWriter.write( String.valueOf( restart ? 1 : 0 ) );
+				fileWriter.write( String.valueOf( type.ordinal() - 1 ) );
 				fileWriter.flush();
 			} else {
 				LOGGER.error( "Restart File could not be created" );

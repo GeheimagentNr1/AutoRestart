@@ -10,6 +10,7 @@ import net.minecraft.util.text.StringTextComponent;
 public class RestartCommand {
 	
 	
+	@SuppressWarnings( "SameReturnValue" )
 	public static void register( CommandDispatcher<CommandSource> dispatcher ) {
 		
 		dispatcher.register( Commands.literal( "restart" ).requires( source -> source.hasPermissionLevel( 4 ) )

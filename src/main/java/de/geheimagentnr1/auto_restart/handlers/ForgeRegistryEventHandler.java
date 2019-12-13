@@ -21,7 +21,7 @@ public class ForgeRegistryEventHandler {
 	public static void handlerServerStartEvent( FMLServerStartingEvent event ) {
 		
 		if( event.getServer().isDedicatedServer() ) {
-			ServerRestarter.createStopFile();
+			ServerRestarter.createExceptionFile();
 			ModConfig.load();
 			RestartCommand.register( event.getCommandDispatcher() );
 		}
