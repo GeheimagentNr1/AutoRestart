@@ -7,10 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
 import net.minecraftforge.fml.event.server.FMLServerStoppedEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
 import java.util.Timer;
 
 
@@ -19,8 +16,6 @@ public class AutoRestart {
 	
 	
 	public final static String MODID = "auto_restart";
-	
-	private static final Logger LOGGER = LogManager.getLogger();
 	
 	public AutoRestart() {
 		
@@ -39,17 +34,13 @@ public class AutoRestart {
 		
 		if( event.getServer().isDedicatedServer() ) {
 			if( ServerRestarter.shouldDoRestart() ) {
-				if( !ModConfig.usesRestartScript() ) {
-					LOGGER.info( "Restart Server" );
-					ProcessBuilder builder = new ProcessBuilder( ModConfig.getRestartCommand() );
-					try {
-						builder.start();
-					} catch( IOException exception ) {
-						LOGGER.error( "Auto Restart could not be done.", exception );
-					}
-				}
+				ServerRestarter.restartServer();
 			} else {
-				if( !event.getServer().isServerRunning() ) {
+				if( event.getServer().isServerRunning() ) {
+					if( ModConfig.shouldRestartOnCrash() ) {
+						ServerRestarter.restartServer();
+					}
+				} else {
 					ServerRestarter.createStopFile();
 				}
 			}

@@ -33,6 +33,19 @@ public class ServerRestarter {
 		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
 	}
 	
+	public static void restartServer() {
+		
+		if( !ModConfig.usesRestartScript() ) {
+			LOGGER.info( "Restart Server" );
+			ProcessBuilder builder = new ProcessBuilder( ModConfig.getRestartCommand() );
+			try {
+				builder.start();
+			} catch( IOException exception ) {
+				LOGGER.error( "Auto Restart could not be done.", exception );
+			}
+		}
+	}
+	
 	public static void createExceptionFile() {
 		
 		saveToFile( StopType.EXCEPTION );

@@ -32,6 +32,8 @@ public class ModConfig {
 	
 	private final static ForgeConfigSpec.BooleanValue USES_RESTART_SCRIPT;
 	
+	private final static ForgeConfigSpec.BooleanValue RESTART_ON_CRASH;
+	
 	private final static ForgeConfigSpec.ConfigValue<String> RESTART_COMMAND;
 	
 	private final static ArrayList<RestartTime> restartTimes = new ArrayList<>();
@@ -60,6 +62,8 @@ public class ModConfig {
 			.define( "restart_message", "Server will auto restart." );
 		USES_RESTART_SCRIPT = BUILDER.comment( "Is the server started by a restart script." )
 			.define( "uses_restart_script", false );
+		RESTART_ON_CRASH = BUILDER.comment( "Should the server be automatically restarted when it crashes." )
+			.define( "restart_on_crash", false );
 		RESTART_COMMAND = BUILDER.comment( "Command that is execute on Server stopped to restart the server. " +
 			"Only called if " + USES_RESTART_SCRIPT.getPath() + " is false." ).define( "restart_command", "" );
 		
@@ -128,13 +132,18 @@ public class ModConfig {
 		return RESTART_MESSAGE.get();
 	}
 	
-	public static String getRestartCommand() {
-		
-		return RESTART_COMMAND.get();
-	}
-	
 	public static boolean usesRestartScript() {
 		
 		return USES_RESTART_SCRIPT.get();
+	}
+	
+	public static boolean shouldRestartOnCrash() {
+		
+		return RESTART_ON_CRASH.get();
+	}
+	
+	public static String getRestartCommand() {
+		
+		return RESTART_COMMAND.get();
 	}
 }
