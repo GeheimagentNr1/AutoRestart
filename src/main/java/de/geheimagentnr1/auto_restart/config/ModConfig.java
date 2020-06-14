@@ -24,7 +24,7 @@ public class ModConfig {
 	
 	private final static ForgeConfigSpec CONFIG;
 	
-	private final static ForgeConfigSpec.BooleanValue AUTO_START;
+	private final static ForgeConfigSpec.BooleanValue AUTO_RESTART;
 	
 	private final static ForgeConfigSpec.ConfigValue<List<String>> RESTART_TIMES;
 	
@@ -40,7 +40,7 @@ public class ModConfig {
 	
 	static {
 		
-		AUTO_START = BUILDER.comment( "Should the Server do Autorestarts?" ).define( "auto_restart", false );
+		AUTO_RESTART = BUILDER.comment( "Should the Server do automatic restarts?" ).define( "auto_restart", false );
 		RESTART_TIMES = BUILDER.comment( "Times in 24 hour format on with the server will automaticaly restarts." )
 			.define( "restart_times", Arrays.asList( "14:00", "16:32" ), o -> {
 				if( o == null ) {
@@ -58,13 +58,13 @@ public class ModConfig {
 				}
 				return true;
 			} );
-		RESTART_MESSAGE = BUILDER.comment( "Message that ist shown on auto restart." )
+		RESTART_MESSAGE = BUILDER.comment( "Message that is shown on auto restart." )
 			.define( "restart_message", "Server will auto restart." );
-		USES_RESTART_SCRIPT = BUILDER.comment( "Is the server started by a restart script." )
+		USES_RESTART_SCRIPT = BUILDER.comment( "Is the server started by an external restart script?" )
 			.define( "uses_restart_script", false );
 		RESTART_ON_CRASH = BUILDER.comment( "Should the server be automatically restarted when it crashes." )
 			.define( "restart_on_crash", false );
-		RESTART_COMMAND = BUILDER.comment( "Command that is execute on Server stopped to restart the server. " +
+		RESTART_COMMAND = BUILDER.comment( "Command that is executed on Server stopped to restart the server. " +
 			"Only called if " + USES_RESTART_SCRIPT.getPath() + " is false." ).define( "restart_command", "" );
 		
 		CONFIG = BUILDER.build();
@@ -79,7 +79,7 @@ public class ModConfig {
 		configData.load();
 		CONFIG.setConfig( configData );
 		loadRestartTimes();
-		LOGGER.info( "{} = {}", AUTO_START.getPath(), AUTO_START.get() );
+		LOGGER.info( "{} = {}", AUTO_RESTART.getPath(), AUTO_RESTART.get() );
 		LOGGER.info( "{} = {}", RESTART_TIMES.getPath(), RESTART_TIMES.get() );
 		LOGGER.info( "{} = {}", RESTART_MESSAGE.getPath(), RESTART_MESSAGE.get() );
 		LOGGER.info( "{} = {}", USES_RESTART_SCRIPT.getPath(), USES_RESTART_SCRIPT.get() );
@@ -117,9 +117,9 @@ public class ModConfig {
 	public static boolean shouldAutoRestart() {
 		
 		if( getRestartTimes().isEmpty() ) {
-			AUTO_START.set( false );
+			AUTO_RESTART.set( false );
 		}
-		return AUTO_START.get();
+		return AUTO_RESTART.get();
 	}
 	
 	public static ArrayList<RestartTime> getRestartTimes() {
