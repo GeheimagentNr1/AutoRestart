@@ -65,8 +65,7 @@ public class ServerRestarter {
 		
 		FileWriter fileWriter = null;
 		try {
-			File file = new File( "." + File.separator + AutoRestart.MODID + File.separator +
-				"restart" );
+			File file = new File( "." + File.separator + AutoRestart.MODID + File.separator + "restart" );
 			if( file.exists() || file.getParentFile().mkdirs() && file.createNewFile() ) {
 				fileWriter = new FileWriter( file );
 				fileWriter.write( String.valueOf( type.ordinal() - 1 ) );
