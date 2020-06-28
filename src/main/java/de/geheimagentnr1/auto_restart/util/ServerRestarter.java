@@ -4,6 +4,8 @@ import de.geheimagentnr1.auto_restart.AutoRestart;
 import de.geheimagentnr1.auto_restart.config.ModConfig;
 import de.geheimagentnr1.auto_restart.tasks.ShutdownTask;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.Util;
+import net.minecraft.util.text.ChatType;
 import net.minecraft.util.text.StringTextComponent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,9 +28,11 @@ public class ServerRestarter {
 		shouldDoRestart = true;
 		createRestartFile();
 		if( auto ) {
-			server.getPlayerList().sendMessage( new StringTextComponent( ModConfig.getRestartMessage() ), true );
+			server.getPlayerList().func_232641_a_( new StringTextComponent( ModConfig.getRestartMessage() ),
+				ChatType.SYSTEM, Util.field_240973_b_ );
 		} else {
-			server.getPlayerList().sendMessage( new StringTextComponent( "The Server is getting restarted." ), true );
+			server.getPlayerList().func_232641_a_( new StringTextComponent( "The Server is getting restarted." ),
+				ChatType.SYSTEM, Util.field_240973_b_ );
 		}
 		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
 	}

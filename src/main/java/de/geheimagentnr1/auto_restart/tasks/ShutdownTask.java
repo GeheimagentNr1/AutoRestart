@@ -1,6 +1,8 @@
 package de.geheimagentnr1.auto_restart.tasks;
 
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.Util;
+import net.minecraft.util.text.ChatType;
 import net.minecraft.util.text.StringTextComponent;
 
 import java.util.TimerTask;
@@ -25,7 +27,8 @@ public class ShutdownTask extends TimerTask {
 	public void run() {
 		
 		if( count > 0 ) {
-			server.getPlayerList().sendMessage( new StringTextComponent( "Restarting in " + count + "..." ), true );
+			server.getPlayerList().func_232641_a_( new StringTextComponent( "Restarting in " + count + "..." ),
+				ChatType.SYSTEM, Util.field_240973_b_ );
 		} else {
 			if( count == 0 ) {
 				server.initiateShutdown( false );
