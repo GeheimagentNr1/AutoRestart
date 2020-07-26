@@ -7,5 +7,5 @@ import net.minecraftforge.fml.common.Mod;
 public class AutoRestart {
 	
 	
-	public final static String MODID = "auto_restart";
+	public static final String MODID = "auto_restart";
 }

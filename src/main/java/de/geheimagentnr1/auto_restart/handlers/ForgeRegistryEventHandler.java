@@ -4,6 +4,8 @@ import de.geheimagentnr1.auto_restart.config.ModConfig;
 import de.geheimagentnr1.auto_restart.elements.commands.RestartCommand;
 import de.geheimagentnr1.auto_restart.tasks.AutoRestartTask;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
+import net.minecraft.command.Commands;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
@@ -28,7 +30,14 @@ public class ForgeRegistryEventHandler {
 		if( event.getServer().isDedicatedServer() ) {
 			ServerRestarter.createExceptionFile();
 			ModConfig.load();
-			RestartCommand.register( event.getCommandDispatcher() );
+		}
+	}
+	
+	@SubscribeEvent
+	public static void handlerRegisterCommandsEvent( RegisterCommandsEvent event ) {
+		
+		if( event.getEnvironment() == Commands.EnvironmentType.DEDICATED ) {
+			RestartCommand.register( event.getDispatcher() );
 		}
 	}
 	
