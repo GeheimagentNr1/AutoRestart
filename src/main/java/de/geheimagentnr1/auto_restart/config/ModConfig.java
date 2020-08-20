@@ -16,27 +16,27 @@ import java.util.List;
 public class ModConfig {
 	
 	
-	private final static Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger();
 	
-	private final static String mod_name = "Auto Restart";
+	private static final String mod_name = "Auto Restart";
 	
-	private final static ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+	private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	
-	private final static ForgeConfigSpec CONFIG;
+	private static final ForgeConfigSpec CONFIG;
 	
-	private final static ForgeConfigSpec.BooleanValue AUTO_RESTART;
+	private static final ForgeConfigSpec.BooleanValue AUTO_RESTART;
 	
-	private final static ForgeConfigSpec.ConfigValue<List<String>> RESTART_TIMES;
+	private static final ForgeConfigSpec.ConfigValue<List<String>> RESTART_TIMES;
 	
-	private final static ForgeConfigSpec.ConfigValue<String> RESTART_MESSAGE;
+	private static final ForgeConfigSpec.ConfigValue<String> RESTART_MESSAGE;
 	
-	private final static ForgeConfigSpec.BooleanValue USES_RESTART_SCRIPT;
+	private static final ForgeConfigSpec.BooleanValue USES_RESTART_SCRIPT;
 	
-	private final static ForgeConfigSpec.BooleanValue RESTART_ON_CRASH;
+	private static final ForgeConfigSpec.BooleanValue RESTART_ON_CRASH;
 	
-	private final static ForgeConfigSpec.ConfigValue<String> RESTART_COMMAND;
+	private static final ForgeConfigSpec.ConfigValue<String> RESTART_COMMAND;
 	
-	private final static ArrayList<RestartTime> restartTimes = new ArrayList<>();
+	private static final ArrayList<RestartTime> restartTimes = new ArrayList<>();
 	
 	static {
 		

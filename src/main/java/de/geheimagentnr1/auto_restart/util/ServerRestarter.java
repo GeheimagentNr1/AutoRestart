@@ -19,7 +19,7 @@ public class ServerRestarter {
 	
 	private static final Logger LOGGER = LogManager.getLogger();
 	
-	private volatile static boolean shouldDoRestart = false;
+	private static volatile boolean shouldDoRestart = false;
 	
 	public static void restart( MinecraftServer server, boolean auto ) {
 		
