@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 
 
-@SuppressWarnings( "UtilityClassWithPublicConstructor" )
+@SuppressWarnings( { "UtilityClassWithPublicConstructor", "unused" } )
 @Mod( AutoRestart.MODID )
 public class AutoRestart {
 	
