@@ -1,7 +1,7 @@
 package de.geheimagentnr1.auto_restart.util;
 
 import de.geheimagentnr1.auto_restart.AutoRestart;
-import de.geheimagentnr1.auto_restart.config.ModConfig;
+import de.geheimagentnr1.auto_restart.config.MainConfig;
 import de.geheimagentnr1.auto_restart.tasks.ShutdownTask;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.StringTextComponent;
@@ -26,7 +26,7 @@ public class ServerRestarter {
 		shouldDoRestart = true;
 		createRestartFile();
 		if( auto ) {
-			server.getPlayerList().sendMessage( new StringTextComponent( ModConfig.getRestartMessage() ), true );
+			server.getPlayerList().sendMessage( new StringTextComponent( MainConfig.getRestartMessage() ), true );
 		} else {
 			server.getPlayerList().sendMessage( new StringTextComponent( "The Server is getting restarted." ), true );
 		}
@@ -35,9 +35,9 @@ public class ServerRestarter {
 	
 	public static void restartServer() {
 		
-		if( !ModConfig.usesRestartScript() ) {
+		if( !MainConfig.usesRestartScript() ) {
 			LOGGER.info( "Restart Server" );
-			ProcessBuilder builder = new ProcessBuilder( ModConfig.getRestartCommand() );
+			ProcessBuilder builder = new ProcessBuilder( MainConfig.getRestartCommand() );
 			try {
 				builder.start();
 			} catch( IOException exception ) {

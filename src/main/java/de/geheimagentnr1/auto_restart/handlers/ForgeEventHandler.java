@@ -1,6 +1,6 @@
 package de.geheimagentnr1.auto_restart.handlers;
 
-import de.geheimagentnr1.auto_restart.config.ModConfig;
+import de.geheimagentnr1.auto_restart.config.MainConfig;
 import de.geheimagentnr1.auto_restart.elements.commands.RestartCommand;
 import de.geheimagentnr1.auto_restart.tasks.AutoRestartTask;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
@@ -17,7 +17,7 @@ import java.util.Timer;
 
 @SuppressWarnings( "unused" )
 @Mod.EventBusSubscriber( bus = Mod.EventBusSubscriber.Bus.FORGE )
-public class ForgeRegistryEventHandler {
+public class ForgeEventHandler {
 	
 	
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -27,7 +27,6 @@ public class ForgeRegistryEventHandler {
 		
 		if( event.getServer().isDedicatedServer() ) {
 			ServerRestarter.createExceptionFile();
-			ModConfig.load();
 			RestartCommand.register( event.getCommandDispatcher() );
 		}
 	}
@@ -35,7 +34,7 @@ public class ForgeRegistryEventHandler {
 	@SubscribeEvent
 	public static void handleServerStarted( FMLServerStartedEvent event ) {
 		
-		if( event.getServer().isDedicatedServer() && ModConfig.shouldAutoRestart() ) {
+		if( event.getServer().isDedicatedServer() ) {
 			new Timer( true ).scheduleAtFixedRate( new AutoRestartTask( event.getServer() ), 0, 1000 * 60 );
 		}
 	}
@@ -48,7 +47,7 @@ public class ForgeRegistryEventHandler {
 				ServerRestarter.restartServer();
 			} else {
 				if( event.getServer().isServerRunning() ) {
-					if( ModConfig.shouldRestartOnCrash() ) {
+					if( MainConfig.shouldRestartOnCrash() ) {
 						ServerRestarter.restartServer();
 					}
 				} else {
