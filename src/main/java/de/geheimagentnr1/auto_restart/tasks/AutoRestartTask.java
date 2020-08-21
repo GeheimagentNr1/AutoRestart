@@ -33,9 +33,6 @@ public class AutoRestartTask extends TimerTask {
 					break;
 				}
 			}
-			System.out.println( "Active " + LocalDateTime.now() );
-		} else {
-			System.out.println( "Inactive " + LocalDateTime.now() );
 		}
 	}
 }
