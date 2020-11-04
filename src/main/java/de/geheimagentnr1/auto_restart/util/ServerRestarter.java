@@ -29,10 +29,10 @@ public class ServerRestarter {
 		createRestartFile();
 		if( auto ) {
 			server.getPlayerList().func_232641_a_( new StringTextComponent( MainConfig.getRestartMessage() ),
-				ChatType.SYSTEM, Util.field_240973_b_ );
+				ChatType.SYSTEM, Util.DUMMY_UUID );
 		} else {
 			server.getPlayerList().func_232641_a_( new StringTextComponent( "The Server is getting restarted." ),
-				ChatType.SYSTEM, Util.field_240973_b_ );
+				ChatType.SYSTEM, Util.DUMMY_UUID );
 		}
 		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
 	}

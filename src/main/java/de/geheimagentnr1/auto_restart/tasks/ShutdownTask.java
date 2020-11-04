@@ -28,7 +28,7 @@ public class ShutdownTask extends TimerTask {
 		
 		if( count > 0 ) {
 			server.getPlayerList().func_232641_a_( new StringTextComponent( "Restarting in " + count + "..." ),
-				ChatType.SYSTEM, Util.field_240973_b_ );
+				ChatType.SYSTEM, Util.DUMMY_UUID );
 		} else {
 			if( count == 0 ) {
 				server.initiateShutdown( false );
