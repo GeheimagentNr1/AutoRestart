@@ -14,7 +14,7 @@ import java.util.Optional;
 public class ServerConfig {
 	
 	
-	private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger( ServerConfig.class );
 	
 	private static final String MOD_NAME = ModLoadingContext.get().getActiveContainer().getModInfo().getDisplayName();
 	
@@ -34,15 +34,23 @@ public class ServerConfig {
 	
 	private static final ForgeConfigSpec.ConfigValue<List<String>> AUTO_RESTART_WARNING_TIMES;
 	
-	private static final ForgeConfigSpec.ConfigValue<String> RESTART_ON_EMPTY_DELAY;
+	private static final ForgeConfigSpec.BooleanValue ON_EMPTY_RESTART_ENABLED;
 	
-	private static final ForgeConfigSpec.BooleanValue RESTART_ON_EMPTY_ENABLED;
+	private static final ForgeConfigSpec.ConfigValue<String> ON_EMPTY_RESTART_DELAY;
+	
+	private static final ForgeConfigSpec.BooleanValue LOW_TPS_RESTART_ENABLED;
+	
+	private static final ForgeConfigSpec.DoubleValue LOW_TPS_RESTART_MINIMUM_TPS_LEVEL;
+	
+	private static final ForgeConfigSpec.ConfigValue<String> LOW_TPS_RESTART_DELAY;
 	
 	private static final ArrayList<AutoRestartTime> autoRestartTimes = new ArrayList<>();
 	
 	private static final ArrayList<Timing> autoRestartWarningTimes = new ArrayList<>();
 	
-	private static Timing restartOnEmptyDelay;
+	private static Timing onEmptyRestartDelay;
+	
+	private static Timing lowTpsRestartDelay;
 	
 	static {
 		
@@ -87,10 +95,10 @@ public class ServerConfig {
 			);
 		BUILDER.pop();
 		BUILDER.comment( "Options for restart, if the server is empty" )
-			.push( "restart_on_empty" );
-		RESTART_ON_EMPTY_ENABLED = BUILDER.comment( "Should the server restart, if no players are online." )
+			.push( "on_empty_restart" );
+		ON_EMPTY_RESTART_ENABLED = BUILDER.comment( "Should the server restart, if no players are online?" )
 			.define( "enabled", false );
-		RESTART_ON_EMPTY_DELAY = BUILDER.comment(
+		ON_EMPTY_RESTART_DELAY = BUILDER.comment(
 			String.format(
 				"Delay after the server should restart, if it is empty.%n" +
 					"Examples:%n" +
@@ -108,6 +116,34 @@ public class ServerConfig {
 					return false;
 				}
 			);
+		BUILDER.comment( "Options for restart, if the tps of server or its dimensions are " )
+			.push( "low_tps_restart" );
+		LOW_TPS_RESTART_ENABLED = BUILDER.comment(
+			"Should the server restart, if it is below a tps level for a certain time?"
+		)
+			.define( "enabled", false );
+		LOW_TPS_RESTART_MINIMUM_TPS_LEVEL = BUILDER.comment(
+			"TPS level below which the server is restarted, if it lasts for a certain time."
+		)
+			.defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
+		LOW_TPS_RESTART_DELAY = BUILDER.comment( String.format(
+			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.%n" +
+				"Examples:%n" +
+				" - 5s - For a delay 5 seconds%n" +
+				" - 7m - For a delay 7 minutes%n" +
+				" - 2h - For a delay 2 hours"
+		) )
+			.define(
+				"delay",
+				Timing.build( 1, TimeUnit.MINUTES ).toString(),
+				object -> {
+					if( object instanceof String ) {
+						return Timing.parse( (String)object ).isPresent();
+					}
+					return false;
+				}
+			);
+		BUILDER.pop();
 		BUILDER.pop();
 		CONFIG = BUILDER.build();
 	}
@@ -117,7 +153,8 @@ public class ServerConfig {
 		printConfig();
 		loadAutoRestartTimes();
 		loadAutoRestartWarningTimes();
-		loadRestartOnEmptyDelay();
+		loadOnEmptyRestartDelay();
+		loadLowTpsRestartDelay();
 	}
 	
 	private static void printConfig() {
@@ -129,8 +166,8 @@ public class ServerConfig {
 		LOGGER.info( "{} = {}", AUTO_RESTART_TIMES.getPath(), AUTO_RESTART_TIMES.get() );
 		LOGGER.info( "{} = {}", AUTO_RESTART_ON_CRASH.getPath(), AUTO_RESTART_ON_CRASH.get() );
 		LOGGER.info( "{} = {}", AUTO_RESTART_WARNING_TIMES.getPath(), AUTO_RESTART_WARNING_TIMES.get() );
-		LOGGER.info( "{} = {}", RESTART_ON_EMPTY_ENABLED.getPath(), RESTART_ON_EMPTY_ENABLED.get() );
-		LOGGER.info( "{} = {}", RESTART_ON_EMPTY_DELAY.getPath(), RESTART_ON_EMPTY_DELAY.get() );
+		LOGGER.info( "{} = {}", ON_EMPTY_RESTART_ENABLED.getPath(), ON_EMPTY_RESTART_ENABLED.get() );
+		LOGGER.info( "{} = {}", ON_EMPTY_RESTART_DELAY.getPath(), ON_EMPTY_RESTART_DELAY.get() );
 		LOGGER.info( "\"{}\" Config loaded", MOD_NAME );
 	}
 	
@@ -174,14 +211,25 @@ public class ServerConfig {
 		}
 	}
 	
-	private static void loadRestartOnEmptyDelay() {
+	private static void loadOnEmptyRestartDelay() {
 		
 		try {
-			restartOnEmptyDelay = Timing.parse( RESTART_ON_EMPTY_DELAY.get() ).orElseThrow(
-				() -> new IllegalStateException( String.format( "%s: Invalid restart on empty delay", MOD_NAME ) )
+			onEmptyRestartDelay = Timing.parse( ON_EMPTY_RESTART_DELAY.get() ).orElseThrow(
+				() -> new IllegalStateException( String.format( "%s: Invalid on empty restart delay", MOD_NAME ) )
 			);
 		} catch( Throwable throwable ) {
-			throw  new IllegalStateException( throwable );
+			throw new IllegalStateException( throwable );
+		}
+	}
+	
+	private static void loadLowTpsRestartDelay() {
+		
+		try {
+			lowTpsRestartDelay = Timing.parse( LOW_TPS_RESTART_DELAY.get() ).orElseThrow(
+				() -> new IllegalStateException( String.format( "%s: Invalid low tps restart delay", MOD_NAME ) )
+			);
+		} catch( Throwable throwable ) {
+			throw new IllegalStateException( throwable );
 		}
 	}
 	
@@ -218,13 +266,28 @@ public class ServerConfig {
 		return autoRestartWarningTimes;
 	}
 	
-	public static boolean isRestartOnEmptyEnabled() {
+	public static boolean getOnEmptyRestartEnabled() {
 		
-		return RESTART_ON_EMPTY_ENABLED.get();
+		return ON_EMPTY_RESTART_ENABLED.get();
 	}
 	
-	public static Timing getRestartOnEmptyDelay() {
+	public static Timing getOnEmptyRestartDelay() {
 		
-		return restartOnEmptyDelay;
+		return onEmptyRestartDelay;
+	}
+	
+	public static boolean isLowTpsRestartEnabled() {
+		
+		return LOW_TPS_RESTART_ENABLED.get();
+	}
+	
+	public static double getLowTpsRestartMinimumTpsLevel() {
+		
+		return LOW_TPS_RESTART_MINIMUM_TPS_LEVEL.get();
+	}
+	
+	public static Timing getLowTpsRestartDelay() {
+		
+		return lowTpsRestartDelay;
 	}
 }

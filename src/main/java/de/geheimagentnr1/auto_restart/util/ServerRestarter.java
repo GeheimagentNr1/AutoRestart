@@ -2,6 +2,7 @@ package de.geheimagentnr1.auto_restart.util;
 
 import de.geheimagentnr1.auto_restart.AutoRestart;
 import de.geheimagentnr1.auto_restart.config.ServerConfig;
+import net.minecraft.server.MinecraftServer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,14 +14,15 @@ import java.io.IOException;
 public class ServerRestarter {
 	
 	
-	private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger( ServerRestarter.class );
 	
 	private static volatile boolean shouldDoRestart = false;
 	
-	public static void restart() {
+	public static void restart( MinecraftServer server ) {
 		
 		shouldDoRestart = true;
 		createRestartFile();
+		server.initiateShutdown( false );
 	}
 	
 	public static void restartServer() {

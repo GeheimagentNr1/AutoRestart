@@ -2,7 +2,7 @@ package de.geheimagentnr1.auto_restart.handlers;
 
 import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import de.geheimagentnr1.auto_restart.elements.commands.RestartCommand;
-import de.geheimagentnr1.auto_restart.tasks.AutoRestartTask;
+import de.geheimagentnr1.auto_restart.task.AutoRestartTask;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.player.PlayerEvent;

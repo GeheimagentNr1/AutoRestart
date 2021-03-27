@@ -18,7 +18,7 @@ public class RestartCommand {
 			.executes( context -> {
 				CommandSource source = context.getSource();
 				source.sendFeedback( new StringTextComponent( "Restarting the server" ), true );
-				ServerRestarter.restart();
+				ServerRestarter.restart( source.getServer() );
 				return Command.SINGLE_SUCCESS;
 			} ) );
 	}
