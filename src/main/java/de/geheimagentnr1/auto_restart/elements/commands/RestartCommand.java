@@ -1,5 +1,6 @@
 package de.geheimagentnr1.auto_restart.elements.commands;
 
+import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.minecraft.command.CommandSource;
@@ -17,8 +18,8 @@ public class RestartCommand {
 			.executes( context -> {
 				CommandSource source = context.getSource();
 				source.sendFeedback( new StringTextComponent( "Restarting the server" ), true );
-				ServerRestarter.restart( source.getServer(), false );
-				return 1;
+				ServerRestarter.restart();
+				return Command.SINGLE_SUCCESS;
 			} ) );
 	}
 }

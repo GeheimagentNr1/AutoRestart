@@ -1,17 +1,13 @@
 package de.geheimagentnr1.auto_restart.util;
 
 import de.geheimagentnr1.auto_restart.AutoRestart;
-import de.geheimagentnr1.auto_restart.config.MainConfig;
-import de.geheimagentnr1.auto_restart.tasks.ShutdownTask;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.text.StringTextComponent;
+import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Timer;
 
 
 public class ServerRestarter {
@@ -21,23 +17,17 @@ public class ServerRestarter {
 	
 	private static volatile boolean shouldDoRestart = false;
 	
-	public static void restart( MinecraftServer server, boolean auto ) {
+	public static void restart() {
 		
 		shouldDoRestart = true;
 		createRestartFile();
-		if( auto ) {
-			server.getPlayerList().sendMessage( new StringTextComponent( MainConfig.getRestartMessage() ), true );
-		} else {
-			server.getPlayerList().sendMessage( new StringTextComponent( "The Server is getting restarted." ), true );
-		}
-		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
 	}
 	
 	public static void restartServer() {
 		
-		if( !MainConfig.usesRestartScript() ) {
+		if( !ServerConfig.usesRestartScript() ) {
 			LOGGER.info( "Restart Server" );
-			ProcessBuilder builder = new ProcessBuilder( MainConfig.getRestartCommand() );
+			ProcessBuilder builder = new ProcessBuilder( ServerConfig.getRestartCommand() );
 			try {
 				builder.start();
 			} catch( IOException exception ) {
@@ -65,6 +55,7 @@ public class ServerRestarter {
 		
 		FileWriter fileWriter = null;
 		try {
+			LOGGER.info( "Saving restart status \"{}\" to file", type );
 			File file = new File( "." + File.separator + AutoRestart.MODID + File.separator + "restart" );
 			if( file.exists() || file.getParentFile().mkdirs() && file.createNewFile() ) {
 				fileWriter = new FileWriter( file );

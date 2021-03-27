@@ -1,0 +1,76 @@
+project,description,version,developers,url,year,licenses,license urls,dependency
+Access Transformers,Transforms class member access based on specification files,1.0.5,"cpw,DemonWav",https://github.com/MinecraftForge/AccessTransformers,null,MIT,https://opensource.org/licenses/MIT,net.minecraftforge:accesstransformers:1.0.5
+ANTLR 4 Runtime,The ANTLR 4 Runtime,4.7.2,null,null,null,The BSD License,http://www.antlr.org/license.html,org.antlr:antlr4-runtime:4.7.2
+Apache Commons Codec,The Apache Commons Codec package contains simple encoder and decoders for
+     various formats such as Base64 and Hexadecimal.  In addition to these
+     widely used encoders and decoders, the codec package also maintains a
+     collection of phonetic encoding utilities.,1.10,"Henri Yandell,Tim OBrien,Scott Sanders,Rodney Waldhoff,Daniel Rall,Jon S. Stevens,Gary Gregory,David Graham,Julius Davies,Thomas Neidhart",http://commons.apache.org/proper/commons-codec/,2002,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,commons-codec:commons-codec:1.10
+Apache Commons Compress,Apache Commons Compress software defines an API for working with compression and archive formats.
+These include: bzip2, gzip, pack200, lzma, xz, Snappy, traditional Unix Compress and ar, cpio, jar, tar, zip, dump, 7z, arj.,1.8.1,"Torsten Curdt,Stefan Bodewig,Sebastian Bazley,Christian Grobmeier,Julius Davies,Damjan Jovanovic,Emmanuel Bourg",http://commons.apache.org/proper/commons-compress/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.commons:commons-compress:1.8.1
+Apache Commons IO,The Apache Commons IO library contains utility classes, stream implementations, file filters, 
+file comparators, endian transformation classes, and much more.,2.5,"Scott Sanders,dIon Gillard,Nicola Ken Barozzi,Henri Yandell,Stephen Colebourne,Jeremias Maerki,Matthew Hawthorne,Martin Cooper,Rob Oxspring,Jochen Wiedmann,Niall Pemberton,Jukka Zitting,Gary Gregory,Kristian Rosenvold",http://commons.apache.org/proper/commons-io/,2002,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,commons-io:commons-io:2.5
+Apache Commons Lang,Apache Commons Lang, a package of Java utility classes for the
+  classes that are in java.lang's hierarchy, or are considered to be so
+  standard as to justify existence in java.lang.,3.8.1,"Daniel Rall,Stephen Colebourne,Henri Yandell,Steven Caswell,Robert Burrell Donkin,Gary D. Gregory,Fredrik Westermarck,James Carman,Niall Pemberton,Matt Benson,Joerg Schaible,Oliver Heger,Paul Benedict,Benedikt Ritter,Duncan Jones,Loic Guibert,Rob Tompkins",http://commons.apache.org/proper/commons-lang/,2001,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.commons:commons-lang3:3.8.1
+Apache HttpClient,HttpComponents Client,4.3.3,null,http://hc.apache.org/httpcomponents-client,null,null,null,org.apache.httpcomponents:httpclient:4.3.3
+Apache HttpCore,HttpComponents Core (blocking I/O),4.3.2,null,http://hc.apache.org/httpcomponents-core-ga,2005,null,null,org.apache.httpcomponents:httpcore:4.3.2
+Apache Log4j API,The Apache Log4j API,2.11.2,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.logging.log4j:log4j-api:2.11.2
+Apache Log4j Core,The Apache Log4j Implementation,2.11.2,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.logging.log4j:log4j-core:2.11.2
+asm,ASM, a very small and fast Java bytecode manipulation framework,6.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.org/,2000,BSD,http://asm.ow2.org/license.html,org.ow2.asm:asm:6.2
+asm-analysis,Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework,6.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.org/,2000,BSD,http://asm.ow2.org/license.html,org.ow2.asm:asm-analysis:6.2
+asm-commons,Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework,6.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.org/,2000,BSD,http://asm.ow2.org/license.html,org.ow2.asm:asm-commons:6.2
+asm-tree,Tree API of ASM, a very small and fast Java bytecode manipulation framework,6.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.org/,2000,BSD,http://asm.ow2.org/license.html,org.ow2.asm:asm-tree:6.2
+asm-util,Utilities for ASM, a very small and fast Java bytecode manipulation framework,6.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.org/,2000,BSD,http://asm.ow2.org/license.html,org.ow2.asm:asm-util:6.2
+authlib,Minecraft LegacyLauncher,1.5.25,null,http://github.com/Mojang/LegacyLauncher,null,null,null,com.mojang:authlib:1.5.25
+brigadier,null,1.0.17,null,null,null,null,null,com.mojang:brigadier:1.0.17
+client,null,1.14.4,null,null,null,null,null,net.minecraft:client:1.14.4
+Common utilities for the Game Technology Group,Common utilities for the Game Technology Group,1.0.0,,http://java.net/projects/jutils,null,BSD,http://www.opensource.org/licenses/bsd-license.php,net.java.jutils:jutils:1.0.0
+Commons Logging,Commons Logging is a thin adapter allowing configurable bridging to other,
+    well known logging systems.,1.1.3,"Juozas Baliuka,Morgan Delagrange,Peter Donald,Robert Burrell Donkin,Simon Kitching,Dennis Lundberg,Costin Manolache,Craig McClanahan,Thomas Neidhart,Scott Sanders,Richard Sitze,Brian Stansberry,Rodney Waldhoff",http://commons.apache.org/proper/commons-logging/,2001,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,commons-logging:commons-logging:1.1.3
+Core Mods,Core modding framework for use with forge,1.0.0,cpw,https://github.com/MinecraftForge/coremods,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:coremods:1.0.0
+datafixerupper,null,2.0.24,null,null,null,null,null,com.mojang:datafixerupper:2.0.24
+Event Bus,High performance Event Bus library,1.0.0,"cpw,LexManos",https://github.com/MinecraftForge/eventbus,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:eventbus:1.0.0
+fastutil,fastutil extends the Java Collections Framework by providing type-specific maps, sets, lists and priority queues with a small memory footprint and fast access and insertion; provides also big (64-bit) arrays, sets and lists, and fast, practical I/O classes for binary and text files.,8.2.1,Sebastiano Vigna,http://fastutil.di.unimi.it/,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.html,it.unimi.dsi:fastutil:8.2.1
+FindBugs-jsr305,JSR305 Annotations for Findbugs,3.0.2,null,http://findbugs.sourceforge.net/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.findbugs:jsr305:3.0.2
+forge,null,1.14.4-28.2.23_mapped_stable_58-1.14.4,null,null,null,null,null,net.minecraftforge:forge:1.14.4-28.2.23_mapped_stable_58-1.14.4
+Forge Service Provider Interface,API for services which can plug into forge, or which are used by forge in other places,1.5.0,cpw,https://github.com/MinecraftForge/ForgeSPI,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:forgespi:1.5.0
+Grotesque Java 9 Hacks,Grotesque Java 9 Hacks to allow modlauncher to function,1.1.0,cpw,https://github.com/cpw/grossjava9classpathhacks,null,null,null,cpw.mods:grossjava9hacks:1.1.0
+Gson,null,2.8.0,null,null,null,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.gson:gson:2.8.0
+Guava: Google Core Libraries for Java,Guava is a suite of core and expanded libraries that include
+    utility classes, google's collections, io classes, and much
+    much more.
+
+    Guava has only one code dependency - javax.annotation,
+    per the JSR-305 spec.,21.0,null,null,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.guava:guava:21.0
+ICU4J,International Component for Unicode for Java (ICU4J) is a mature, widely used Java library
+    providing Unicode and Globalization support,51.2,"Mark Davis,John Emmons,Doug Felt,Deborah Goldsmith,Steven Loomis,Markus Scherer,Peter Edberg,Yoshito Umaoka",http://icu-project.org/,2001,ICU License,http://source.icu-project.org/repos/icu/icu/trunk/license.html,com.ibm.icu:icu4j-core-mojang:51.2
+Java Native Access,Java Native Access,4.4.0,"Timothy Wall,Matthias Bläsing",https://github.com/java-native-access/jna,null,"LGPL, version 2.1,Apache License v2.0","http://www.gnu.org/licenses/licenses.html,http://www.apache.org/licenses/LICENSE-2.0.txt",net.java.dev.jna:jna:4.4.0
+Java Native Access Platform,Java Native Access Platform,3.4.0,Timotyh Wall,https://github.com/twall/jna,null,LGPL, version 2.1,http://creativecommons.org/licenses/LGPL/2.1/,net.java.dev.jna:platform:3.4.0
+javabridge,null,1.0.22,null,null,null,null,null,com.mojang:javabridge:1.0.22
+JInput,Library for access to input devices.,2.0.5,,http://java.net/projects/jinput,null,BSD,http://www.opensource.org/licenses/bsd-license.php,net.java.jinput:jinput:2.0.5
+JInput natives,Library for access to input devices.,2.0.5,,http://java.net/projects/jinput,null,BSD,http://www.opensource.org/licenses/bsd-license.php,net.java.jinput:jinput-platform:2.0.5
+JLine Bundle,null,3.12.1,null,null,null,The BSD License,https://opensource.org/licenses/BSD-3-Clause,org.jline:jline:3.12.1
+JLine Reader,null,3.12.1,null,null,null,The BSD License,https://opensource.org/licenses/BSD-3-Clause,org.jline:jline-reader:3.12.1
+JLine Terminal,null,3.12.1,null,null,null,The BSD License,https://opensource.org/licenses/BSD-3-Clause,org.jline:jline-terminal:3.12.1
+JOpt Simple,A Java library for parsing command line options,5.0.4,Paul Holser,http://jopt-simple.github.io/jopt-simple,null,The MIT License,http://www.opensource.org/licenses/mit-license.php,net.sf.jopt-simple:jopt-simple:5.0.4
+LWJGL,The LWJGL core library.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl:3.2.2
+LWJGL - GLFW bindings,A multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-glfw:3.2.2
+LWJGL - jemalloc bindings,A general purpose malloc implementation that emphasizes fragmentation avoidance and scalable concurrency support.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-jemalloc:3.2.2
+LWJGL - OpenAL bindings,A cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-openal:3.2.2
+LWJGL - OpenGL bindings,The most widely adopted 2D and 3D graphics API in the industry, bringing thousands of applications to a wide variety of computer platforms.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-opengl:3.2.2
+LWJGL - stb bindings,Single-file public domain libraries for fonts, images, ogg vorbis files and more.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-stb:3.2.2
+Maven Artifact,null,3.6.0,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.maven:maven-artifact:3.6.0
+mergetool,Merges two jar files together, useful for rebuilding Retroguard stripped jars.,1.0.9,Lex Manos,https://github.com/MinecraftForge/MergeTool,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:mergetool:1.0.9
+Mod Launcher,Common ModLauncher framework,4.1.0,cpw,https://github.com/cpw/modlauncher,null,null,null,cpw.mods:modlauncher:4.1.0
+Netty/All-in-One,null,4.1.25.Final,null,null,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-all:4.1.25.Final
+NightConfig core,Powerful, easy-to-use and multi-language configuration library for the JVM - core module,3.6.0,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:core:3.6.0
+NightConfig toml,Powerful, easy-to-use and multi-language configuration library for the JVM - toml module,3.6.0,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:toml:3.6.0
+oshi-core,null,1.1,null,null,null,null,null,oshi-project:oshi-core:1.1
+patchy,null,1.1,null,null,null,null,null,com.mojang:patchy:1.1
+Plexus Common Utilities,A collection of various utility classes to ease working with strings, files, command lines, XML and
+    more.,3.1.0,null,null,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,org.codehaus.plexus:plexus-utils:3.1.0
+TerminalConsoleAppender,JLine 3 appender for Log4j2, allows extending command line apps using colors and command completion,1.2.0,Minecrell,https://github.com/Minecrell/TerminalConsoleAppender,null,MIT License,https://opensource.org/licenses/MIT,net.minecrell:terminalconsoleappender:1.2.0
+text2speech,null,1.11.3,null,null,null,null,null,com.mojang:text2speech:1.11.3
+TypeTools,null,0.6.0,Jonathan Halterman,http://github.com/jhalterman/typetools/,null,Apache License, Version 2.0,http://apache.org/licenses/LICENSE-2.0,net.jodah:typetools:0.6.0
+Unsafe,Unsafe hacks for forge,0.2.0,cpw,https://github.com/MinecraftForge/Unsafe,null,null,null,net.minecraftforge:unsafe:0.2.0
+vecmath,null,1.5.2,null,null,null,null,null,java3d:vecmath:1.5.2
