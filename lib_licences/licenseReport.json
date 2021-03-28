@@ -2,7 +2,7 @@
   {
     "project": "Access Transformers",
     "description": "Transforms class member access based on specification files",
-    "version": "2.2.0",
+    "version": "3.0.1",
     "developers": [
       "cpw",
       "DemonWav"
@@ -15,12 +15,12 @@
         "license_url": "https://opensource.org/licenses/MIT"
       }
     ],
-    "dependency": "net.minecraftforge:accesstransformers:2.2.0"
+    "dependency": "net.minecraftforge:accesstransformers:3.0.1"
   },
   {
     "project": "ANTLR 4 Runtime",
     "description": "The ANTLR 4 Runtime",
-    "version": "4.7.2",
+    "version": "4.9.1",
     "developers": [],
     "url": null,
     "year": null,
@@ -30,7 +30,7 @@
         "license_url": "http://www.antlr.org/license.html"
       }
     ],
-    "dependency": "org.antlr:antlr4-runtime:4.7.2"
+    "dependency": "org.antlr:antlr4-runtime:4.9.1"
   },
   {
     "project": "Apache Commons Codec",
@@ -197,7 +197,7 @@
   {
     "project": "asm",
     "description": "ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "7.2",
+    "version": "9.0",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -211,12 +211,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm:7.2"
+    "dependency": "org.ow2.asm:asm:9.0"
   },
   {
     "project": "asm-analysis",
     "description": "Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "7.2",
+    "version": "9.0",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -230,12 +230,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-analysis:7.2"
+    "dependency": "org.ow2.asm:asm-analysis:9.0"
   },
   {
     "project": "asm-commons",
     "description": "Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "7.2",
+    "version": "9.0",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -249,12 +249,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-commons:7.2"
+    "dependency": "org.ow2.asm:asm-commons:9.0"
   },
   {
     "project": "asm-tree",
     "description": "Tree API of ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "7.2",
+    "version": "9.0",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -268,12 +268,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-tree:7.2"
+    "dependency": "org.ow2.asm:asm-tree:9.0"
   },
   {
     "project": "asm-util",
     "description": "Utilities for ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "7.2",
+    "version": "9.0",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -287,17 +287,17 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-util:7.2"
+    "dependency": "org.ow2.asm:asm-util:9.0"
   },
   {
     "project": "authlib",
     "description": null,
-    "version": "1.6.25",
+    "version": "2.1.28",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:authlib:1.6.25"
+    "dependency": "com.mojang:authlib:2.1.28"
   },
   {
     "project": "brigadier",
@@ -312,12 +312,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.16.3",
+    "version": "1.16.4",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.16.3"
+    "dependency": "net.minecraft:client:1.16.4"
   },
   {
     "project": "Common utilities for the Game Technology Group",
@@ -368,7 +368,7 @@
   {
     "project": "Core Mods",
     "description": "Core modding framework for use with forge",
-    "version": "3.0.0",
+    "version": "4.0.3",
     "developers": [
       "cpw"
     ],
@@ -380,7 +380,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:coremods:3.0.0"
+    "dependency": "net.minecraftforge:coremods:4.0.3"
   },
   {
     "project": "datafixerupper",
@@ -395,7 +395,7 @@
   {
     "project": "Event Bus",
     "description": "High performance Event Bus library",
-    "version": "3.0.3",
+    "version": "4.0.0",
     "developers": [
       "cpw",
       "LexManos"
@@ -408,7 +408,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:eventbus:3.0.3"
+    "dependency": "net.minecraftforge:eventbus:4.0.0"
   },
   {
     "project": "fastutil",
@@ -445,12 +445,12 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.3-34.1.42_mapped_snapshot_20201028-1.16.3",
+    "version": "1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.3-34.1.42_mapped_snapshot_20201028-1.16.3"
+    "dependency": "net.minecraftforge:forge:1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3"
   },
   {
     "project": "Forge Service Provider Interface",
@@ -849,14 +849,24 @@
   {
     "project": "Mod Launcher",
     "description": "Common ModLauncher framework",
-    "version": "8.0.6",
+    "version": "8.0.9",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/modlauncher",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:modlauncher:8.0.6"
+    "dependency": "cpw.mods:modlauncher:8.0.9"
+  },
+  {
+    "project": "nashorn-core-compat",
+    "description": null,
+    "version": "15.1.1",
+    "developers": [],
+    "url": null,
+    "year": null,
+    "licenses": [],
+    "dependency": "net.minecraftforge:nashorn-core-compat:15.1.1"
   },
   {
     "project": "Netty/All-in-One",
