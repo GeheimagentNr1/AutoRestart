@@ -1,47 +1,35 @@
 package de.geheimagentnr1.auto_restart.util;
 
 import de.geheimagentnr1.auto_restart.AutoRestart;
-import de.geheimagentnr1.auto_restart.config.MainConfig;
-import de.geheimagentnr1.auto_restart.tasks.ShutdownTask;
+import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.Util;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.text.StringTextComponent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Timer;
 
 
 public class ServerRestarter {
 	
 	
-	private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger( ServerRestarter.class );
 	
 	private static volatile boolean shouldDoRestart = false;
 	
-	public static void restart( MinecraftServer server, boolean auto ) {
+	public static void restart( MinecraftServer server ) {
 		
 		shouldDoRestart = true;
 		createRestartFile();
-		if( auto ) {
-			server.getPlayerList().func_232641_a_( new StringTextComponent( MainConfig.getRestartMessage() ),
-				ChatType.SYSTEM, Util.DUMMY_UUID );
-		} else {
-			server.getPlayerList().func_232641_a_( new StringTextComponent( "The Server is getting restarted." ),
-				ChatType.SYSTEM, Util.DUMMY_UUID );
-		}
-		new Timer( true ).scheduleAtFixedRate( new ShutdownTask( server ), 0, 1000 );
+		server.initiateShutdown( false );
 	}
 	
 	public static void restartServer() {
 		
-		if( !MainConfig.usesRestartScript() ) {
+		if( !ServerConfig.usesRestartScript() ) {
 			LOGGER.info( "Restart Server" );
-			ProcessBuilder builder = new ProcessBuilder( MainConfig.getRestartCommand() );
+			ProcessBuilder builder = new ProcessBuilder( ServerConfig.getRestartCommand() );
 			try {
 				builder.start();
 			} catch( IOException exception ) {
@@ -69,6 +57,7 @@ public class ServerRestarter {
 		
 		FileWriter fileWriter = null;
 		try {
+			LOGGER.info( "Saving restart status \"{}\" to file", type );
 			File file = new File( "." + File.separator + AutoRestart.MODID + File.separator + "restart" );
 			if( file.exists() || file.getParentFile().mkdirs() && file.createNewFile() ) {
 				fileWriter = new FileWriter( file );
