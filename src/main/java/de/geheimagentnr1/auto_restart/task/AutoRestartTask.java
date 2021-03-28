@@ -6,10 +6,12 @@ import de.geheimagentnr1.auto_restart.config.Timing;
 import de.geheimagentnr1.auto_restart.util.TpsHelper;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.Util;
+import net.minecraft.util.text.ChatType;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.server.ServerWorld;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -62,8 +64,8 @@ public class AutoRestartTask extends TimerTask {
 				foundTpsProblem = true;
 			}
 			if( !foundTpsProblem ) {
-				for( DimensionType dimension : DimensionType.getAll() ) {
-					long[] tickTimes = server.getTickTime( dimension );
+				for( ServerWorld serverWorld : server.getWorlds() ) {
+					long[] tickTimes = server.getTickTime( serverWorld.func_234923_W_() );
 					if( tickTimes != null ) {
 						if( TpsHelper.calculateTps( tickTimes ) < ServerConfig.getLowTpsRestartMinimumTpsLevel() ) {
 							tpsProblemDuration++;
@@ -88,12 +90,13 @@ public class AutoRestartTask extends TimerTask {
 				Duration difference = autoRestartTime.getDifferenceTo( current_time );
 				for( Timing warning_time : ServerConfig.getAutoRestartWarningTimes() ) {
 					if( difference.getSeconds() == warning_time.getSeconds() ) {
-						server.getPlayerList().sendMessage(
+						server.getPlayerList().func_232641_a_(
 							new StringTextComponent( String.format(
 								"Restarting in %s...",
 								warning_time.getDisplayString()
-							) ).setStyle( new Style().setColor( TextFormatting.YELLOW ) ),
-							true
+							) ).func_230530_a_( Style.field_240709_b_.func_240712_a_( TextFormatting.YELLOW ) ),
+							ChatType.SYSTEM,
+							Util.field_240973_b_
 						);
 					}
 				}

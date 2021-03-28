@@ -2,7 +2,7 @@
   {
     "project": "Access Transformers",
     "description": "Transforms class member access based on specification files",
-    "version": "2.1.3",
+    "version": "2.2.0",
     "developers": [
       "cpw",
       "DemonWav"
@@ -15,7 +15,7 @@
         "license_url": "https://opensource.org/licenses/MIT"
       }
     ],
-    "dependency": "net.minecraftforge:accesstransformers:2.1.3"
+    "dependency": "net.minecraftforge:accesstransformers:2.2.0"
   },
   {
     "project": "ANTLR 4 Runtime",
@@ -291,13 +291,13 @@
   },
   {
     "project": "authlib",
-    "description": "Minecraft LegacyLauncher",
-    "version": "1.5.25",
+    "description": null,
+    "version": "1.6.25",
     "developers": [],
-    "url": "http://github.com/Mojang/LegacyLauncher",
+    "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:authlib:1.5.25"
+    "dependency": "com.mojang:authlib:1.6.25"
   },
   {
     "project": "brigadier",
@@ -312,12 +312,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.15.2",
+    "version": "1.16.1",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.15.2"
+    "dependency": "net.minecraft:client:1.16.1"
   },
   {
     "project": "Common utilities for the Game Technology Group",
@@ -368,7 +368,7 @@
   {
     "project": "Core Mods",
     "description": "Core modding framework for use with forge",
-    "version": "2.0.3",
+    "version": "3.0.0",
     "developers": [
       "cpw"
     ],
@@ -380,22 +380,22 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:coremods:2.0.3"
+    "dependency": "net.minecraftforge:coremods:3.0.0"
   },
   {
     "project": "datafixerupper",
     "description": null,
-    "version": "2.0.24",
+    "version": "3.0.25",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:datafixerupper:2.0.24"
+    "dependency": "com.mojang:datafixerupper:3.0.25"
   },
   {
     "project": "Event Bus",
     "description": "High performance Event Bus library",
-    "version": "2.2.1",
+    "version": "3.0.3",
     "developers": [
       "cpw",
       "LexManos"
@@ -408,7 +408,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:eventbus:2.2.1"
+    "dependency": "net.minecraftforge:eventbus:3.0.3"
   },
   {
     "project": "fastutil",
@@ -445,17 +445,17 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.15.2-31.2.49_mapped_snapshot_20210327-1.15.1",
+    "version": "1.16.1-32.0.108_mapped_snapshot_20200514-1.16",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.15.2-31.2.49_mapped_snapshot_20210327-1.15.1"
+    "dependency": "net.minecraftforge:forge:1.16.1-32.0.108_mapped_snapshot_20200514-1.16"
   },
   {
     "project": "Forge Service Provider Interface",
     "description": "API for services which can plug into forge, or which are used by forge in other places",
-    "version": "3.0.0",
+    "version": "3.1.1",
     "developers": [
       "cpw"
     ],
@@ -467,7 +467,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:forgespi:3.0.0"
+    "dependency": "net.minecraftforge:forgespi:3.1.1"
   },
   {
     "project": "Grotesque Java 9 Hacks",
@@ -514,7 +514,7 @@
   {
     "project": "ICU4J",
     "description": "International Component for Unicode for Java (ICU4J) is a mature, widely used Java library\n    providing Unicode and Globalization support",
-    "version": "51.2",
+    "version": "66.1",
     "developers": [
       "Mark Davis",
       "John Emmons",
@@ -529,11 +529,11 @@
     "year": "2001",
     "licenses": [
       {
-        "license": "ICU License",
-        "license_url": "http://source.icu-project.org/repos/icu/icu/trunk/license.html"
+        "license": "Unicode/ICU License",
+        "license_url": "https://raw.githubusercontent.com/unicode-org/icu/master/icu4c/LICENSE"
       }
     ],
-    "dependency": "com.ibm.icu:icu4j-core-mojang:51.2"
+    "dependency": "com.ibm.icu:icu4j:66.1"
   },
   {
     "project": "Java Native Access",
@@ -834,7 +834,7 @@
   {
     "project": "mixin",
     "description": "Mixin",
-    "version": "0.8.2",
+    "version": "0.8",
     "developers": [],
     "url": "http://www.spongepowered.org/",
     "year": null,
@@ -844,19 +844,19 @@
         "license_url": "http://opensource.org/licenses/MIT"
       }
     ],
-    "dependency": "org.spongepowered:mixin:0.8.2"
+    "dependency": "org.spongepowered:mixin:0.8"
   },
   {
     "project": "Mod Launcher",
     "description": "Common ModLauncher framework",
-    "version": "5.1.2",
+    "version": "6.1.3",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/modlauncher",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:modlauncher:5.1.2"
+    "dependency": "cpw.mods:modlauncher:6.1.3"
   },
   {
     "project": "Netty/All-in-One",
