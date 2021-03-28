@@ -312,12 +312,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.16.1",
+    "version": "1.16.2",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.16.1"
+    "dependency": "net.minecraft:client:1.16.2"
   },
   {
     "project": "Common utilities for the Game Technology Group",
@@ -385,12 +385,12 @@
   {
     "project": "datafixerupper",
     "description": null,
-    "version": "3.0.25",
+    "version": "4.0.26",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:datafixerupper:3.0.25"
+    "dependency": "com.mojang:datafixerupper:4.0.26"
   },
   {
     "project": "Event Bus",
@@ -445,12 +445,12 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.1-32.0.108_mapped_snapshot_20200514-1.16",
+    "version": "1.16.2-33.0.61_mapped_snapshot_20200514-1.16",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.1-32.0.108_mapped_snapshot_20200514-1.16"
+    "dependency": "net.minecraftforge:forge:1.16.2-33.0.61_mapped_snapshot_20200514-1.16"
   },
   {
     "project": "Forge Service Provider Interface",
@@ -849,14 +849,14 @@
   {
     "project": "Mod Launcher",
     "description": "Common ModLauncher framework",
-    "version": "6.1.3",
+    "version": "7.0.1",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/modlauncher",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:modlauncher:6.1.3"
+    "dependency": "cpw.mods:modlauncher:7.0.1"
   },
   {
     "project": "Netty/All-in-One",
