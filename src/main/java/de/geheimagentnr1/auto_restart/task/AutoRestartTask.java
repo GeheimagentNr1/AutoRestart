@@ -65,7 +65,7 @@ public class AutoRestartTask extends TimerTask {
 			}
 			if( !foundTpsProblem ) {
 				for( ServerWorld serverWorld : server.getWorlds() ) {
-					long[] tickTimes = server.getTickTime( serverWorld.func_234923_W_() );
+					long[] tickTimes = server.getTickTime( serverWorld.getDimensionKey() );
 					if( tickTimes != null ) {
 						if( TpsHelper.calculateTps( tickTimes ) < ServerConfig.getLowTpsRestartMinimumTpsLevel() ) {
 							tpsProblemDuration++;
@@ -94,9 +94,9 @@ public class AutoRestartTask extends TimerTask {
 							new StringTextComponent( String.format(
 								"Restarting in %s...",
 								warning_time.getDisplayString()
-							) ).func_230530_a_( Style.field_240709_b_.func_240712_a_( TextFormatting.YELLOW ) ),
+							) ).setStyle( Style.EMPTY.setFormatting( TextFormatting.YELLOW ) ),
 							ChatType.SYSTEM,
-							Util.field_240973_b_
+							Util.DUMMY_UUID
 						);
 					}
 				}

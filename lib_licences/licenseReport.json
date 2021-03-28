@@ -312,12 +312,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.16.2",
+    "version": "1.16.3",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.16.2"
+    "dependency": "net.minecraft:client:1.16.3"
   },
   {
     "project": "Common utilities for the Game Technology Group",
@@ -445,17 +445,17 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.2-33.0.61_mapped_snapshot_20200514-1.16",
+    "version": "1.16.3-34.1.42_mapped_snapshot_20201028-1.16.3",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.2-33.0.61_mapped_snapshot_20200514-1.16"
+    "dependency": "net.minecraftforge:forge:1.16.3-34.1.42_mapped_snapshot_20201028-1.16.3"
   },
   {
     "project": "Forge Service Provider Interface",
     "description": "API for services which can plug into forge, or which are used by forge in other places",
-    "version": "3.1.1",
+    "version": "3.2.0",
     "developers": [
       "cpw"
     ],
@@ -467,7 +467,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:forgespi:3.1.1"
+    "dependency": "net.minecraftforge:forgespi:3.2.0"
   },
   {
     "project": "Grotesque Java 9 Hacks",
@@ -834,7 +834,7 @@
   {
     "project": "mixin",
     "description": "Mixin",
-    "version": "0.8",
+    "version": "0.8.2",
     "developers": [],
     "url": "http://www.spongepowered.org/",
     "year": null,
@@ -844,19 +844,19 @@
         "license_url": "http://opensource.org/licenses/MIT"
       }
     ],
-    "dependency": "org.spongepowered:mixin:0.8"
+    "dependency": "org.spongepowered:mixin:0.8.2"
   },
   {
     "project": "Mod Launcher",
     "description": "Common ModLauncher framework",
-    "version": "7.0.1",
+    "version": "8.0.6",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/modlauncher",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:modlauncher:7.0.1"
+    "dependency": "cpw.mods:modlauncher:8.0.6"
   },
   {
     "project": "Netty/All-in-One",
