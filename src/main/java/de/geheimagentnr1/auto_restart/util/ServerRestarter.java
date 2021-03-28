@@ -22,7 +22,7 @@ public class ServerRestarter {
 		
 		shouldDoRestart = true;
 		createRestartFile();
-		server.initiateShutdown( false );
+		server.halt( false );
 	}
 	
 	public static void restartServer() {

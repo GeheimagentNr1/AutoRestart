@@ -58,14 +58,14 @@ public class AutoRestartTask extends TimerTask {
 		}
 		if( ServerConfig.isLowTpsRestartEnabled() ) {
 			boolean foundTpsProblem = false;
-			long[] serverTickTimes = server.tickTimeArray;
+			long[] serverTickTimes = server.tickTimes;
 			if( TpsHelper.calculateTps( serverTickTimes ) < ServerConfig.getLowTpsRestartMinimumTpsLevel() ) {
 				tpsProblemDuration++;
 				foundTpsProblem = true;
 			}
 			if( !foundTpsProblem ) {
-				for( ServerWorld serverWorld : server.getWorlds() ) {
-					long[] tickTimes = server.getTickTime( serverWorld.getDimensionKey() );
+				for( ServerWorld serverWorld : server.getAllLevels() ) {
+					long[] tickTimes = server.getTickTime( serverWorld.dimension() );
 					if( tickTimes != null ) {
 						if( TpsHelper.calculateTps( tickTimes ) < ServerConfig.getLowTpsRestartMinimumTpsLevel() ) {
 							tpsProblemDuration++;
@@ -90,13 +90,13 @@ public class AutoRestartTask extends TimerTask {
 				Duration difference = autoRestartTime.getDifferenceTo( current_time );
 				for( Timing warning_time : ServerConfig.getAutoRestartWarningTimes() ) {
 					if( difference.getSeconds() == warning_time.getSeconds() ) {
-						server.getPlayerList().func_232641_a_(
+						server.getPlayerList().broadcastMessage(
 							new StringTextComponent( String.format(
 								"Restarting in %s...",
 								warning_time.getDisplayString()
-							) ).setStyle( Style.EMPTY.setFormatting( TextFormatting.YELLOW ) ),
+							) ).setStyle( Style.EMPTY.applyFormat( TextFormatting.YELLOW ) ),
 							ChatType.SYSTEM,
-							Util.DUMMY_UUID
+							Util.NIL_UUID
 						);
 					}
 				}

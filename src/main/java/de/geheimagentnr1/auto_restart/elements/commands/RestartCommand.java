@@ -14,10 +14,10 @@ public class RestartCommand {
 	@SuppressWarnings( "SameReturnValue" )
 	public static void register( CommandDispatcher<CommandSource> dispatcher ) {
 		
-		dispatcher.register( Commands.literal( "restart" ).requires( source -> source.hasPermissionLevel( 4 ) )
+		dispatcher.register( Commands.literal( "restart" ).requires( source -> source.hasPermission( 4 ) )
 			.executes( context -> {
 				CommandSource source = context.getSource();
-				source.sendFeedback( new StringTextComponent( "Restarting the server" ), true );
+				source.sendSuccess( new StringTextComponent( "Restarting the server" ), true );
 				ServerRestarter.restart( source.getServer() );
 				return Command.SINGLE_SUCCESS;
 			} ) );

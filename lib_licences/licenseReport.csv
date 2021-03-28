@@ -23,16 +23,16 @@ asm-tree,Tree API of ASM, a very small and fast Java bytecode manipulation frame
 asm-util,Utilities for ASM, a very small and fast Java bytecode manipulation framework,9.0,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-util:9.0
 authlib,null,2.1.28,null,null,null,null,null,com.mojang:authlib:2.1.28
 brigadier,null,1.0.17,null,null,null,null,null,com.mojang:brigadier:1.0.17
-client,null,1.16.4,null,null,null,null,null,net.minecraft:client:1.16.4
+client,null,1.16.5,null,null,null,null,null,net.minecraft:client:1.16.5
 Common utilities for the Game Technology Group,Common utilities for the Game Technology Group,1.0.0,,http://java.net/projects/jutils,null,BSD,http://www.opensource.org/licenses/bsd-license.php,net.java.jutils:jutils:1.0.0
 Commons Logging,Commons Logging is a thin adapter allowing configurable bridging to other,
     well known logging systems.,1.1.3,"Juozas Baliuka,Morgan Delagrange,Peter Donald,Robert Burrell Donkin,Simon Kitching,Dennis Lundberg,Costin Manolache,Craig McClanahan,Thomas Neidhart,Scott Sanders,Richard Sitze,Brian Stansberry,Rodney Waldhoff",http://commons.apache.org/proper/commons-logging/,2001,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,commons-logging:commons-logging:1.1.3
-Core Mods,Core modding framework for use with forge,4.0.3,cpw,https://github.com/MinecraftForge/coremods,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:coremods:4.0.3
+Core Mods,Core modding framework for use with forge,4.0.6,cpw,https://github.com/MinecraftForge/coremods,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:coremods:4.0.6
 datafixerupper,null,4.0.26,null,null,null,null,null,com.mojang:datafixerupper:4.0.26
 Event Bus,High performance Event Bus library,4.0.0,"cpw,LexManos",https://github.com/MinecraftForge/eventbus,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:eventbus:4.0.0
 fastutil,fastutil extends the Java Collections Framework by providing type-specific maps, sets, lists and priority queues with a small memory footprint and fast access and insertion; provides also big (64-bit) arrays, sets and lists, and fast, practical I/O classes for binary and text files.,8.2.1,Sebastiano Vigna,http://fastutil.di.unimi.it/,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.html,it.unimi.dsi:fastutil:8.2.1
 FindBugs-jsr305,JSR305 Annotations for Findbugs,3.0.2,null,http://findbugs.sourceforge.net/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.findbugs:jsr305:3.0.2
-forge,null,1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3,null,null,null,null,null,net.minecraftforge:forge:1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3
+forge,null,1.16.5-36.1.2_mapped_official_1.16.5,null,null,null,null,null,net.minecraftforge:forge:1.16.5-36.1.2_mapped_official_1.16.5
 Forge Service Provider Interface,API for services which can plug into forge, or which are used by forge in other places,3.2.0,cpw,https://github.com/MinecraftForge/ForgeSPI,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:forgespi:3.2.0
 Grotesque Java 9 Hacks,Grotesque Java 9 Hacks to allow modlauncher to function,1.3.0,cpw,https://github.com/cpw/grossjava9classpathhacks,null,null,null,cpw.mods:grossjava9hacks:1.3.0
 Gson,null,2.8.0,null,null,null,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.gson:gson:2.8.0
@@ -60,14 +60,15 @@ LWJGL - OpenAL bindings,A cross-platform 3D audio API appropriate for use with g
 LWJGL - OpenGL bindings,The most widely adopted 2D and 3D graphics API in the industry, bringing thousands of applications to a wide variety of computer platforms.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-opengl:3.2.2
 LWJGL - stb bindings,Single-file public domain libraries for fonts, images, ogg vorbis files and more.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-stb:3.2.2
 LWJGL - Tiny File Dialogs bindings,Provides basic modal dialogs.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-tinyfd:3.2.2
+mappings_official,null,1.16.5,null,null,null,null,null,net.minecraft:mappings_official:1.16.5
 Maven Artifact,null,3.6.3,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.maven:maven-artifact:3.6.3
 mergetool,Merges two jar files together, useful for rebuilding Retroguard stripped jars.,1.0.9,Lex Manos,https://github.com/MinecraftForge/MergeTool,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:mergetool:1.0.9
 mixin,Mixin,0.8.2,null,http://www.spongepowered.org/,null,MIT license,http://opensource.org/licenses/MIT,org.spongepowered:mixin:0.8.2
 Mod Launcher,Common ModLauncher framework,8.0.9,cpw,https://github.com/cpw/modlauncher,null,null,null,cpw.mods:modlauncher:8.0.9
-nashorn-core-compat,null,15.1.1,null,null,null,null,null,net.minecraftforge:nashorn-core-compat:15.1.1
+nashorn-core-compat,null,15.1.1.1,null,null,null,null,null,net.minecraftforge:nashorn-core-compat:15.1.1.1
 Netty/All-in-One,null,4.1.25.Final,null,null,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-all:4.1.25.Final
-NightConfig core,Powerful, easy-to-use and multi-language configuration library for the JVM - core module,3.6.2,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:core:3.6.2
-NightConfig toml,Powerful, easy-to-use and multi-language configuration library for the JVM - toml module,3.6.2,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:toml:3.6.2
+NightConfig core,Powerful, easy-to-use and multi-language configuration library for the JVM - core module,3.6.3,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:core:3.6.3
+NightConfig toml,Powerful, easy-to-use and multi-language configuration library for the JVM - toml module,3.6.3,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:toml:3.6.3
 oshi-core,null,1.1,null,null,null,null,null,oshi-project:oshi-core:1.1
 patchy,null,1.1,null,null,null,null,null,com.mojang:patchy:1.1
 Plexus Common Utilities,A collection of various utility classes to ease working with strings, files, command lines, XML and

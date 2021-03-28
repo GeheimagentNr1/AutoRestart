@@ -59,7 +59,7 @@ public class ForgeEventHandler {
 		if( ServerRestarter.shouldDoRestart() ) {
 			ServerRestarter.restartServer();
 		} else {
-			if( event.getServer().isServerRunning() ) {
+			if( event.getServer().isRunning() ) {
 				if( ServerConfig.shouldAutoRestartOnCrash() ) {
 					ServerRestarter.restartServer();
 				}

@@ -312,12 +312,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.16.4",
+    "version": "1.16.5",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.16.4"
+    "dependency": "net.minecraft:client:1.16.5"
   },
   {
     "project": "Common utilities for the Game Technology Group",
@@ -368,7 +368,7 @@
   {
     "project": "Core Mods",
     "description": "Core modding framework for use with forge",
-    "version": "4.0.3",
+    "version": "4.0.6",
     "developers": [
       "cpw"
     ],
@@ -380,7 +380,7 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:coremods:4.0.3"
+    "dependency": "net.minecraftforge:coremods:4.0.6"
   },
   {
     "project": "datafixerupper",
@@ -445,12 +445,12 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3",
+    "version": "1.16.5-36.1.2_mapped_official_1.16.5",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.4-35.1.37_mapped_snapshot_20201028-1.16.3"
+    "dependency": "net.minecraftforge:forge:1.16.5-36.1.2_mapped_official_1.16.5"
   },
   {
     "project": "Forge Service Provider Interface",
@@ -800,6 +800,16 @@
     "dependency": "org.lwjgl:lwjgl-tinyfd:3.2.2"
   },
   {
+    "project": "mappings_official",
+    "description": null,
+    "version": "1.16.5",
+    "developers": [],
+    "url": null,
+    "year": null,
+    "licenses": [],
+    "dependency": "net.minecraft:mappings_official:1.16.5"
+  },
+  {
     "project": "Maven Artifact",
     "description": null,
     "version": "3.6.3",
@@ -861,12 +871,12 @@
   {
     "project": "nashorn-core-compat",
     "description": null,
-    "version": "15.1.1",
+    "version": "15.1.1.1",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:nashorn-core-compat:15.1.1"
+    "dependency": "net.minecraftforge:nashorn-core-compat:15.1.1.1"
   },
   {
     "project": "Netty/All-in-One",
@@ -886,7 +896,7 @@
   {
     "project": "NightConfig core",
     "description": "Powerful, easy-to-use and multi-language configuration library for the JVM - core module",
-    "version": "3.6.2",
+    "version": "3.6.3",
     "developers": [
       ""
     ],
@@ -898,12 +908,12 @@
         "license_url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
       }
     ],
-    "dependency": "com.electronwill.night-config:core:3.6.2"
+    "dependency": "com.electronwill.night-config:core:3.6.3"
   },
   {
     "project": "NightConfig toml",
     "description": "Powerful, easy-to-use and multi-language configuration library for the JVM - toml module",
-    "version": "3.6.2",
+    "version": "3.6.3",
     "developers": [
       ""
     ],
@@ -915,7 +925,7 @@
         "license_url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
       }
     ],
-    "dependency": "com.electronwill.night-config:toml:3.6.2"
+    "dependency": "com.electronwill.night-config:toml:3.6.3"
   },
   {
     "project": "oshi-core",
