@@ -32,7 +32,7 @@ credits="Thanks for the logo goes to Muse31" #optional
 authors="GeheimagentNr1" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Mod to auto restart the Minecraft server
+Adds auto restarting to Minecraft servers.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.auto_restart]] #optional
