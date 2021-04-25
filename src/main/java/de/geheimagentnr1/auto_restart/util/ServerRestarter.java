@@ -27,7 +27,7 @@ public class ServerRestarter {
 	
 	public static void restartServer() {
 		
-		if( !ServerConfig.usesRestartScript() ) {
+		if( !ServerConfig.usesExternalRestartScript() ) {
 			LOGGER.info( "Restart Server" );
 			ProcessBuilder builder = new ProcessBuilder( ServerConfig.getRestartCommand() );
 			try {
