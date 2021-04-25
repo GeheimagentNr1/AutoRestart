@@ -59,7 +59,7 @@ public class ServerConfig {
 		USES_EXTERNAL_RESTART_SCRIPT = BUILDER.comment( "Is the server started by an external restart script?" )
 			.define( "use_external_restart_script", false );
 		RESTART_COMMAND = BUILDER.comment( String.format(
-			"Command that is executed on Server stopped to restart the server. Only called if %s is false.",
+			"Command that is executed on Server stopped to restart the server. Only called if \"%s\" is false.",
 			USES_EXTERNAL_RESTART_SCRIPT.getPath()
 		) ).define( "restart_command", "" );
 		BUILDER.pop();
@@ -68,7 +68,7 @@ public class ServerConfig {
 		AUTO_RESTART_ENABLED = BUILDER.comment( "Should the Server do automatic restarts?" )
 			.define( "enabled", false );
 		AUTO_RESTART_TIMES =
-			BUILDER.comment( "Times in 24 hour format on with the server will automaticaly restarts." )
+			BUILDER.comment( "Times in 24-hour format on which the server will automatically restart" )
 				.define(
 					"times",
 					new ArrayList<>( Arrays.asList(
@@ -95,7 +95,7 @@ public class ServerConfig {
 			) )
 		);
 		BUILDER.pop();
-		BUILDER.comment( "Options for restart, if the server is empty" )
+		BUILDER.comment( "Options for restart, if the server is empty:" )
 			.push( "on_empty_restart" );
 		ON_EMPTY_RESTART_ENABLED = BUILDER.comment( "Should the server restart, if no players are online?" )
 			.define( "enabled", false );
@@ -115,13 +115,14 @@ public class ServerConfig {
 				return false;
 			}
 		);
-		BUILDER.comment( "Options for restart, if the tps of server or its dimensions are " )
+		BUILDER.pop();
+		BUILDER.comment( "Options for restart, if the tps of server or its dimensions are low:" )
 			.push( "low_tps_restart" );
 		LOW_TPS_RESTART_ENABLED = BUILDER.comment(
-			"Should the server restart, if it is below a tps level for a certain time?"
+			"Should the server restart, if it is below a tps level for a specified time?"
 		).define( "enabled", false );
 		LOW_TPS_RESTART_MINIMUM_TPS_LEVEL = BUILDER.comment(
-			"TPS level below which the server is restarted, if it lasts for a certain time."
+			"TPS level below which the server is restarted, if it lasts for a specified time."
 		).defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
 		LOW_TPS_RESTART_DELAY = BUILDER.comment( String.format(
 			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.%n" +
@@ -139,7 +140,6 @@ public class ServerConfig {
 				return false;
 			}
 		);
-		BUILDER.pop();
 		BUILDER.pop();
 		CONFIG = BUILDER.build();
 	}
