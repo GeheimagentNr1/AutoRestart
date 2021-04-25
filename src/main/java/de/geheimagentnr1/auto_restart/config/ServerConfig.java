@@ -76,12 +76,8 @@ public class ServerConfig {
 						AutoRestartTime.build( 16, 32 ).toString()
 					) )
 				);
-		AUTO_RESTART_ON_CRASH =
-			BUILDER.comment( "Should the server be automatically restarted when it crashes." )
-				.define(
-					"on_crash",
-					false
-				);
+		AUTO_RESTART_ON_CRASH = BUILDER.comment( "Should the server be automatically restarted when it crashes." )
+			.define( "on_crash", false );
 		AUTO_RESTART_WARNING_TIMES = BUILDER.comment( String.format(
 			"Times before an auto restart of the server, a restart warning should be shown.%n" +
 				"Examples:%n" +
