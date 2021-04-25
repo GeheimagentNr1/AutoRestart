@@ -9,10 +9,10 @@ import net.minecraft.command.Commands;
 import net.minecraft.util.text.StringTextComponent;
 
 
+@SuppressWarnings( "SameReturnValue" )
 public class RestartCommand {
 	
 	
-	@SuppressWarnings( "SameReturnValue" )
 	public static void register( CommandDispatcher<CommandSource> dispatcher ) {
 		
 		dispatcher.register( Commands.literal( "restart" )
