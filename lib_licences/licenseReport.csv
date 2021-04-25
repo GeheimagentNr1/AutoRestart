@@ -34,7 +34,7 @@ fastutil,fastutil extends the Java Collections Framework by providing type-speci
 FindBugs-jsr305,JSR305 Annotations for Findbugs,3.0.2,null,http://findbugs.sourceforge.net/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.findbugs:jsr305:3.0.2
 forge,null,1.16.2-33.0.61_mapped_snapshot_20200514-1.16,null,null,null,null,null,net.minecraftforge:forge:1.16.2-33.0.61_mapped_snapshot_20200514-1.16
 Forge Service Provider Interface,API for services which can plug into forge, or which are used by forge in other places,3.1.1,cpw,https://github.com/MinecraftForge/ForgeSPI,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:forgespi:3.1.1
-Grotesque Java 9 Hacks,Grotesque Java 9 Hacks to allow modlauncher to function,1.3.0,cpw,https://github.com/cpw/grossjava9classpathhacks,null,null,null,cpw.mods:grossjava9hacks:1.3.0
+Grotesque Java 9 Hacks,Grotesque Java 9 Hacks to allow modlauncher to function,1.3.3,cpw,https://github.com/cpw/grossjava9classpathhacks,null,null,null,cpw.mods:grossjava9hacks:1.3.3
 Gson,null,2.8.0,null,null,null,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.gson:gson:2.8.0
 Guava: Google Core Libraries for Java,Guava is a suite of core and expanded libraries that include
     utility classes, google's collections, io classes, and much
