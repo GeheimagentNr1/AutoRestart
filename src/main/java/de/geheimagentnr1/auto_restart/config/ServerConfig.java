@@ -125,7 +125,9 @@ public class ServerConfig {
 		).defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
 		LOW_TPS_RESTART_DELAY = BUILDER.comment( String.format(
 			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.%n" +
-				"Examples:%n" + " - 5s - For a delay 5 seconds%n" + " - 7m - For a delay 7 minutes%n" +
+				"Examples:%n" +
+				" - 5s - For a delay 5 seconds%n" +
+				" - 7m - For a delay 7 minutes%n" +
 				" - 2h - For a delay 2 hours"
 		) ).define(
 			"delay",
