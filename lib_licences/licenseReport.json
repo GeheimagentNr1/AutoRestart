@@ -472,14 +472,14 @@
   {
     "project": "Grotesque Java 9 Hacks",
     "description": "Grotesque Java 9 Hacks to allow modlauncher to function",
-    "version": "1.3.0",
+    "version": "1.3.3",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/grossjava9classpathhacks",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:grossjava9hacks:1.3.0"
+    "dependency": "cpw.mods:grossjava9hacks:1.3.3"
   },
   {
     "project": "Gson",
