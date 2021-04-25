@@ -445,12 +445,12 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.5-36.1.2_mapped_official_1.16.5",
+    "version": "1.16.5-36.1.13_mapped_official_1.16.5",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.5-36.1.2_mapped_official_1.16.5"
+    "dependency": "net.minecraftforge:forge:1.16.5-36.1.13_mapped_official_1.16.5"
   },
   {
     "project": "Forge Service Provider Interface",
