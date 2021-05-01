@@ -78,13 +78,13 @@ public class ServerConfig {
 				);
 		AUTO_RESTART_ON_CRASH = BUILDER.comment( "Should the server be automatically restarted when it crashes." )
 			.define( "on_crash", false );
-		AUTO_RESTART_WARNING_TIMES = BUILDER.comment( String.format(
-			"Times before an auto restart of the server, a restart warning should be shown.%n" +
-				"Examples:%n" +
-				" - 5s - For a message 5 seconds before a restart%n" +
-				" - 7m - For a message 7 minutes before a restart%n" +
-				" - 2h - For a message 2 hours before a restart"
-		) ).define(
+		AUTO_RESTART_WARNING_TIMES = BUILDER.comment(
+			"Times before an auto restart of the server, a restart warning should be shown.",
+			"Examples:",
+			" - 5s - For a message 5 seconds before a restart",
+			" - 7m - For a message 7 minutes before a restart",
+			" - 2h - For a message 2 hours before a restart"
+		).define(
 			"warning_times",
 			new ArrayList<>( Arrays.asList(
 				Timing.build( 5, TimeUnit.SECONDS ).toString(),
@@ -99,13 +99,13 @@ public class ServerConfig {
 			.push( "on_empty_restart" );
 		ON_EMPTY_RESTART_ENABLED = BUILDER.comment( "Should the server restart, if no players are online?" )
 			.define( "enabled", false );
-		ON_EMPTY_RESTART_DELAY = BUILDER.comment( String.format(
-			"Delay after the server should restart, if it is empty.%n" +
-				"Examples:%n" +
-				" - 5s - For a delay 5 seconds%n" +
-				" - 7m - For a delay 7 minutes%n" +
-				" - 2h - For a delay 2 hours"
-		) ).define(
+		ON_EMPTY_RESTART_DELAY = BUILDER.comment(
+			"Delay after the server should restart, if it is empty.",
+			"Examples:",
+			" - 5s - For a delay 5 seconds",
+			" - 7m - For a delay 7 minutes",
+			" - 2h - For a delay 2 hours"
+		).define(
 			"delay",
 			Timing.build( 10, TimeUnit.MINUTES ).toString(),
 			object -> {
@@ -124,13 +124,13 @@ public class ServerConfig {
 		LOW_TPS_RESTART_MINIMUM_TPS_LEVEL = BUILDER.comment(
 			"TPS level below which the server is restarted, if it lasts for a specified time."
 		).defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
-		LOW_TPS_RESTART_DELAY = BUILDER.comment( String.format(
-			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.%n" +
-				"Examples:%n" +
-				" - 5s - For a delay 5 seconds%n" +
-				" - 7m - For a delay 7 minutes%n" +
-				" - 2h - For a delay 2 hours"
-		) ).define(
+		LOW_TPS_RESTART_DELAY = BUILDER.comment(
+			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.",
+			"Examples:",
+			" - 5s - For a delay 5 seconds",
+			" - 7m - For a delay 7 minutes",
+			" - 2h - For a delay 2 hours"
+		).define(
 			"delay",
 			Timing.build( 1, TimeUnit.MINUTES ).toString(),
 			object -> {
