@@ -5,13 +5,13 @@ import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import de.geheimagentnr1.auto_restart.config.Timing;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import de.geheimagentnr1.auto_restart.util.TpsHelper;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.Util;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.Style;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -64,8 +64,8 @@ public class AutoRestartTask extends TimerTask {
 				foundTpsProblem = true;
 			}
 			if( !foundTpsProblem ) {
-				for( ServerWorld serverWorld : server.getAllLevels() ) {
-					long[] tickTimes = server.getTickTime( serverWorld.dimension() );
+				for( ServerLevel serverLevel : server.getAllLevels() ) {
+					long[] tickTimes = server.getTickTime( serverLevel.dimension() );
 					if( tickTimes != null ) {
 						if( TpsHelper.calculateTps( tickTimes ) < ServerConfig.getLowTpsRestartMinimumTpsLevel() ) {
 							tpsProblemDuration++;
@@ -91,10 +91,10 @@ public class AutoRestartTask extends TimerTask {
 				for( Timing warning_time : ServerConfig.getAutoRestartWarningTimes() ) {
 					if( difference.getSeconds() == warning_time.getSeconds() ) {
 						server.getPlayerList().broadcastMessage(
-							new StringTextComponent( String.format(
+							new TextComponent( String.format(
 								"Restarting in %s...",
 								warning_time.getDisplayString()
-							) ).setStyle( Style.EMPTY.applyFormat( TextFormatting.YELLOW ) ),
+							) ).setStyle( Style.EMPTY.withColor( ChatFormatting.YELLOW ) ),
 							ChatType.SYSTEM,
 							Util.NIL_UUID
 						);

@@ -4,26 +4,26 @@ import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
-import net.minecraft.command.CommandSource;
-import net.minecraft.command.Commands;
-import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.TextComponent;
 
 
 @SuppressWarnings( "SameReturnValue" )
 public class RestartCommand {
 	
 	
-	public static void register( CommandDispatcher<CommandSource> dispatcher ) {
+	public static void register( CommandDispatcher<CommandSourceStack> dispatcher ) {
 		
 		dispatcher.register( Commands.literal( "restart" )
 			.requires( source -> source.hasPermission( 4 ) )
 			.executes( RestartCommand::restart ) );
 	}
 	
-	private static int restart( CommandContext<CommandSource> context ) {
+	private static int restart( CommandContext<CommandSourceStack> context ) {
 		
-		CommandSource source = context.getSource();
-		source.sendSuccess( new StringTextComponent( "Restarting the server" ), true );
+		CommandSourceStack source = context.getSource();
+		source.sendSuccess( new TextComponent( "Restarting the server" ), true );
 		ServerRestarter.restart( source.getServer() );
 		return Command.SINGLE_SUCCESS;
 	}

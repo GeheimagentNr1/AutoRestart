@@ -67,15 +67,15 @@ public class ServerConfig {
 			.push( "auto_restart" );
 		AUTO_RESTART_ENABLED = BUILDER.comment( "Should the Server do automatic restarts?" )
 			.define( "enabled", false );
-		AUTO_RESTART_TIMES =
-			BUILDER.comment( "Times in 24-hour format on which the server will automatically restart" )
-				.define(
-					"times",
-					new ArrayList<>( Arrays.asList(
-						AutoRestartTime.build( 14, 0 ).toString(),
-						AutoRestartTime.build( 16, 32 ).toString()
-					) )
-				);
+		AUTO_RESTART_TIMES = BUILDER.comment(
+			"Times in 24-hour format on which the server will automatically restart" )
+			.define(
+				"times",
+				new ArrayList<>( Arrays.asList(
+					AutoRestartTime.build( 14, 0 ).toString(),
+					AutoRestartTime.build( 16, 32 ).toString()
+				) )
+			);
 		AUTO_RESTART_ON_CRASH = BUILDER.comment( "Should the server be automatically restarted when it crashes." )
 			.define( "on_crash", false );
 		AUTO_RESTART_WARNING_TIMES = BUILDER.comment(
@@ -119,11 +119,11 @@ public class ServerConfig {
 		BUILDER.comment( "Options for restart, if the tps of server or its dimensions are low:" )
 			.push( "low_tps_restart" );
 		LOW_TPS_RESTART_ENABLED = BUILDER.comment(
-			"Should the server restart, if it is below a tps level for a specified time?"
-		).define( "enabled", false );
+			"Should the server restart, if it is below a tps level for a specified time?" )
+			.define( "enabled", false );
 		LOW_TPS_RESTART_MINIMUM_TPS_LEVEL = BUILDER.comment(
-			"TPS level below which the server is restarted, if it lasts for a specified time."
-		).defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
+			"TPS level below which the server is restarted, if it lasts for a specified time." )
+			.defineInRange( "minium_tps_level", 0.0, 0.0, 20.0 );
 		LOW_TPS_RESTART_DELAY = BUILDER.comment(
 			"Delay, that the server must be below the defined TPS level, in order for it to be restarted.",
 			"Examples:",

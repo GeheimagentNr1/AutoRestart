@@ -43,16 +43,11 @@ public class Timing {
 	
 	public long getSeconds() {
 		
-		switch( timeUnit ) {
-			case SECONDS:
-				return value;
-			case MINUTES:
-				return value * 60;
-			case HOURS:
-				return value * 3600;
-			default:
-				return 0;
-		}
+		return switch( timeUnit ) {
+			case SECONDS -> value;
+			case MINUTES -> value * 60;
+			case HOURS -> value * 3600;
+		};
 	}
 	
 	public String getDisplayString() {

@@ -10,17 +10,19 @@ import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
-import net.minecraftforge.fml.event.server.FMLServerStoppedEvent;
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
+import net.minecraftforge.fmlserverevents.FMLServerStartedEvent;
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
+import net.minecraftforge.fmlserverevents.FMLServerStoppedEvent;
 
 import java.util.Timer;
 
 
-@Mod.EventBusSubscriber( modid = AutoRestart.MODID,
+@Mod.EventBusSubscriber(
+	modid = AutoRestart.MODID,
 	bus = Mod.EventBusSubscriber.Bus.FORGE,
-	value = Dist.DEDICATED_SERVER )
+	value = Dist.DEDICATED_SERVER
+)
 public class ForgeEventHandler {
 	
 	
