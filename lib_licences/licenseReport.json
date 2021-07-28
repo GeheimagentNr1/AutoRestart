@@ -197,7 +197,7 @@
   {
     "project": "asm",
     "description": "ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "9.0",
+    "version": "9.1",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -211,12 +211,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm:9.0"
+    "dependency": "org.ow2.asm:asm:9.1"
   },
   {
     "project": "asm-analysis",
     "description": "Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "9.0",
+    "version": "9.1",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -230,12 +230,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-analysis:9.0"
+    "dependency": "org.ow2.asm:asm-analysis:9.1"
   },
   {
     "project": "asm-commons",
     "description": "Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "9.0",
+    "version": "9.1",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -249,12 +249,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-commons:9.0"
+    "dependency": "org.ow2.asm:asm-commons:9.1"
   },
   {
     "project": "asm-tree",
     "description": "Tree API of ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "9.0",
+    "version": "9.1",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -268,12 +268,12 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-tree:9.0"
+    "dependency": "org.ow2.asm:asm-tree:9.1"
   },
   {
     "project": "asm-util",
     "description": "Utilities for ASM, a very small and fast Java bytecode manipulation framework",
-    "version": "9.0",
+    "version": "9.1",
     "developers": [
       "Eric Bruneton",
       "Eugene Kuleshov",
@@ -287,7 +287,7 @@
         "license_url": "https://asm.ow2.io/license.html"
       }
     ],
-    "dependency": "org.ow2.asm:asm-util:9.0"
+    "dependency": "org.ow2.asm:asm-util:9.1"
   },
   {
     "project": "authlib",
@@ -445,12 +445,12 @@
   {
     "project": "forge",
     "description": null,
-    "version": "1.16.5-36.1.13_mapped_official_1.16.5",
+    "version": "1.16.5-36.2.2_mapped_official_1.16.5",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.16.5-36.1.13_mapped_official_1.16.5"
+    "dependency": "net.minecraftforge:forge:1.16.5-36.2.2_mapped_official_1.16.5"
   },
   {
     "project": "Forge Service Provider Interface",
@@ -940,12 +940,12 @@
   {
     "project": "patchy",
     "description": null,
-    "version": "1.1",
+    "version": "1.2.3",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:patchy:1.1"
+    "dependency": "com.mojang:patchy:1.2.3"
   },
   {
     "project": "Plexus Common Utilities",
