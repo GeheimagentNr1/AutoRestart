@@ -85,7 +85,7 @@
   {
     "project": "Apache Commons Codec",
     "description": "The Apache Commons Codec package contains simple encoder and decoders for\n     various formats such as Base64 and Hexadecimal.  In addition to these\n     widely used encoders and decoders, the codec package also maintains a\n     collection of phonetic encoding utilities.",
-    "version": "1.10",
+    "version": "1.15",
     "developers": [
       "Henri Yandell",
       "Tim OBrien",
@@ -96,22 +96,23 @@
       "Gary Gregory",
       "David Graham",
       "Julius Davies",
-      "Thomas Neidhart"
+      "Thomas Neidhart",
+      "Rob Tompkins"
     ],
-    "url": "http://commons.apache.org/proper/commons-codec/",
+    "url": "https://commons.apache.org/proper/commons-codec/",
     "year": "2002",
     "licenses": [
       {
         "license": "Apache License, Version 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "commons-codec:commons-codec:1.10"
+    "dependency": "commons-codec:commons-codec:1.15"
   },
   {
     "project": "Apache Commons Compress",
-    "description": "Apache Commons Compress software defines an API for working with compression and archive formats.\nThese include: bzip2, gzip, pack200, lzma, xz, Snappy, traditional Unix Compress and ar, cpio, jar, tar, zip, dump, 7z, arj.",
-    "version": "1.8.1",
+    "description": "Apache Commons Compress software defines an API for working with\ncompression and archive formats.  These include: bzip2, gzip, pack200,\nlzma, xz, Snappy, traditional Unix Compress, DEFLATE, DEFLATE64, LZ4,\nBrotli, Zstandard and ar, cpio, jar, tar, zip, dump, 7z, arj.",
+    "version": "1.21",
     "developers": [
       "Torsten Curdt",
       "Stefan Bodewig",
@@ -119,22 +120,25 @@
       "Christian Grobmeier",
       "Julius Davies",
       "Damjan Jovanovic",
-      "Emmanuel Bourg"
+      "Emmanuel Bourg",
+      "Gary Gregory",
+      "Rob Tompkins",
+      "Peter Alfred Lee"
     ],
-    "url": "http://commons.apache.org/proper/commons-compress/",
-    "year": null,
+    "url": "https://commons.apache.org/proper/commons-compress/",
+    "year": "2002",
     "licenses": [
       {
-        "license": "The Apache Software License, Version 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license": "Apache License, Version 2.0",
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "org.apache.commons:commons-compress:1.8.1"
+    "dependency": "org.apache.commons:commons-compress:1.21"
   },
   {
     "project": "Apache Commons IO",
-    "description": "The Apache Commons IO library contains utility classes, stream implementations, file filters, \nfile comparators, endian transformation classes, and much more.",
-    "version": "2.5",
+    "description": "The Apache Commons IO library contains utility classes, stream implementations, file filters,\nfile comparators, endian transformation classes, and much more.",
+    "version": "2.11.0",
     "developers": [
       "Scott Sanders",
       "dIon Gillard",
@@ -151,20 +155,20 @@
       "Gary Gregory",
       "Kristian Rosenvold"
     ],
-    "url": "http://commons.apache.org/proper/commons-io/",
+    "url": "https://commons.apache.org/proper/commons-io/",
     "year": "2002",
     "licenses": [
       {
         "license": "Apache License, Version 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "commons-io:commons-io:2.5"
+    "dependency": "commons-io:commons-io:2.11.0"
   },
   {
     "project": "Apache Commons Lang",
     "description": "Apache Commons Lang, a package of Java utility classes for the\n  classes that are in java.lang\u0027s hierarchy, or are considered to be so\n  standard as to justify existence in java.lang.",
-    "version": "3.8.1",
+    "version": "3.12.0",
     "developers": [
       "Daniel Rall",
       "Stephen Colebourne",
@@ -184,7 +188,7 @@
       "Loic Guibert",
       "Rob Tompkins"
     ],
-    "url": "http://commons.apache.org/proper/commons-lang/",
+    "url": "https://commons.apache.org/proper/commons-lang/",
     "year": "2001",
     "licenses": [
       {
@@ -192,27 +196,66 @@
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "org.apache.commons:commons-lang3:3.8.1"
+    "dependency": "org.apache.commons:commons-lang3:3.12.0"
+  },
+  {
+    "project": "Apache Commons Logging",
+    "description": "Apache Commons Logging is a thin adapter allowing configurable bridging to other,\n    well known logging systems.",
+    "version": "1.2",
+    "developers": [
+      "Juozas Baliuka",
+      "Morgan Delagrange",
+      "Peter Donald",
+      "Robert Burrell Donkin",
+      "Simon Kitching",
+      "Dennis Lundberg",
+      "Costin Manolache",
+      "Craig McClanahan",
+      "Thomas Neidhart",
+      "Scott Sanders",
+      "Richard Sitze",
+      "Brian Stansberry",
+      "Rodney Waldhoff"
+    ],
+    "url": "http://commons.apache.org/proper/commons-logging/",
+    "year": "2001",
+    "licenses": [
+      {
+        "license": "The Apache Software License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "commons-logging:commons-logging:1.2"
   },
   {
     "project": "Apache HttpClient",
-    "description": "HttpComponents Client",
-    "version": "4.3.3",
+    "description": "Apache HttpComponents Client",
+    "version": "4.5.13",
     "developers": [],
     "url": "http://hc.apache.org/httpcomponents-client",
     "year": null,
-    "licenses": [],
-    "dependency": "org.apache.httpcomponents:httpclient:4.3.3"
+    "licenses": [
+      {
+        "license": "Apache License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "org.apache.httpcomponents:httpclient:4.5.13"
   },
   {
     "project": "Apache HttpCore",
-    "description": "HttpComponents Core (blocking I/O)",
-    "version": "4.3.2",
+    "description": "Apache HttpComponents Core (blocking I/O)",
+    "version": "4.4.14",
     "developers": [],
     "url": "http://hc.apache.org/httpcomponents-core-ga",
     "year": "2005",
-    "licenses": [],
-    "dependency": "org.apache.httpcomponents:httpcore:4.3.2"
+    "licenses": [
+      {
+        "license": "Apache License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "org.apache.httpcomponents:httpcore:4.4.14"
   },
   {
     "project": "Apache Log4j API",
@@ -357,34 +400,34 @@
   {
     "project": "authlib",
     "description": null,
-    "version": "2.3.31",
+    "version": "3.2.38",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:authlib:2.3.31"
+    "dependency": "com.mojang:authlib:3.2.38"
   },
   {
     "project": "blocklist",
     "description": null,
-    "version": "1.0.5",
+    "version": "1.0.6",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:blocklist:1.0.5"
+    "dependency": "com.mojang:blocklist:1.0.6"
   },
   {
     "project": "Bootstrap launcher",
     "description": "Allows bootstrapping a modularized environment from a classpath one",
-    "version": "0.1.16",
+    "version": "0.1.17",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/bootstraplauncher",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:bootstraplauncher:0.1.16"
+    "dependency": "cpw.mods:bootstraplauncher:0.1.17"
   },
   {
     "project": "brigadier",
@@ -397,60 +440,32 @@
     "dependency": "com.mojang:brigadier:1.0.18"
   },
   {
+    "project": "Checker Qual",
+    "description": "checker-qual contains annotations (type qualifiers) that a programmer\nwrites to specify Java code for type-checking by the Checker Framework.",
+    "version": "3.12.0",
+    "developers": [
+      "Michael Ernst",
+      "Suzanne Millstein"
+    ],
+    "url": "https://checkerframework.org",
+    "year": null,
+    "licenses": [
+      {
+        "license": "The MIT License",
+        "license_url": "http://opensource.org/licenses/MIT"
+      }
+    ],
+    "dependency": "org.checkerframework:checker-qual:3.12.0"
+  },
+  {
     "project": "client",
     "description": null,
-    "version": "1.17.1",
+    "version": "1.18",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.17.1"
-  },
-  {
-    "project": "Common utilities for the Game Technology Group",
-    "description": "Common utilities for the Game Technology Group",
-    "version": "1.0.0",
-    "developers": [
-      ""
-    ],
-    "url": "http://java.net/projects/jutils",
-    "year": null,
-    "licenses": [
-      {
-        "license": "BSD",
-        "license_url": "http://www.opensource.org/licenses/bsd-license.php"
-      }
-    ],
-    "dependency": "net.java.jutils:jutils:1.0.0"
-  },
-  {
-    "project": "Commons Logging",
-    "description": "Commons Logging is a thin adapter allowing configurable bridging to other,\n    well known logging systems.",
-    "version": "1.1.3",
-    "developers": [
-      "Juozas Baliuka",
-      "Morgan Delagrange",
-      "Peter Donald",
-      "Robert Burrell Donkin",
-      "Simon Kitching",
-      "Dennis Lundberg",
-      "Costin Manolache",
-      "Craig McClanahan",
-      "Thomas Neidhart",
-      "Scott Sanders",
-      "Richard Sitze",
-      "Brian Stansberry",
-      "Rodney Waldhoff"
-    ],
-    "url": "http://commons.apache.org/proper/commons-logging/",
-    "year": "2001",
-    "licenses": [
-      {
-        "license": "The Apache Software License, Version 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
-      }
-    ],
-    "dependency": "commons-logging:commons-logging:1.1.3"
+    "dependency": "net.minecraft:client:1.18"
   },
   {
     "project": "Core Mods",
@@ -480,6 +495,21 @@
     "dependency": "com.mojang:datafixerupper:4.0.26"
   },
   {
+    "project": "error-prone annotations",
+    "description": null,
+    "version": "2.7.1",
+    "developers": [],
+    "url": null,
+    "year": null,
+    "licenses": [
+      {
+        "license": "Apache 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.google.errorprone:error_prone_annotations:2.7.1"
+  },
+  {
     "project": "Event Bus",
     "description": "High performance Event Bus library",
     "version": "5.0.3",
@@ -499,8 +529,8 @@
   },
   {
     "project": "fastutil",
-    "description": "fastutil extends the Java Collections Framework by providing type-specific maps, sets, lists and priority queues with a small memory footprint and fast access and insertion; provides also big (64-bit) arrays, sets and lists, and fast, practical I/O classes for binary and text files.",
-    "version": "8.2.1",
+    "description": "fastutil extends the Java Collections Framework by providing type-specific maps, sets, lists and priority queues with a small memory footprint and fast access and insertion; provides also big (64-bit) arrays, sets and lists, sorting algorithms, and fast, practical I/O classes for binary and text files. Note that if you have both this jar and fastutil-core.jar in your dependencies, fastutil-core.jar should be excluded.",
+    "version": "8.5.6",
     "developers": [
       "Sebastiano Vigna"
     ],
@@ -512,12 +542,12 @@
         "license_url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     ],
-    "dependency": "it.unimi.dsi:fastutil:8.2.1"
+    "dependency": "it.unimi.dsi:fastutil:8.5.6"
   },
   {
     "project": "FindBugs-jsr305",
     "description": "JSR305 Annotations for Findbugs",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "developers": [],
     "url": "http://findbugs.sourceforge.net/",
     "year": null,
@@ -527,12 +557,12 @@
         "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "com.google.code.findbugs:jsr305:3.0.1"
+    "dependency": "com.google.code.findbugs:jsr305:3.0.2"
   },
   {
     "project": "fmlcore",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.17.1-37.0.13",
+    "version": "1.18-38.0.12",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -542,12 +572,12 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:fmlcore:1.17.1-37.0.13"
+    "dependency": "net.minecraftforge:fmlcore:1.18-38.0.12"
   },
   {
     "project": "fmlloader",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.17.1-37.0.13",
+    "version": "1.18-38.0.12",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -557,22 +587,22 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:fmlloader:1.17.1-37.0.13"
+    "dependency": "net.minecraftforge:fmlloader:1.18-38.0.12"
   },
   {
     "project": "forge",
     "description": null,
-    "version": "1.17.1-37.0.13_mapped_official_1.17.1",
+    "version": "1.18-38.0.12_mapped_official_1.18",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.17.1-37.0.13_mapped_official_1.17.1"
+    "dependency": "net.minecraftforge:forge:1.18-38.0.12_mapped_official_1.18"
   },
   {
     "project": "Forge Service Provider Interface",
     "description": "API for services which can plug into forge, or which are used by forge in other places",
-    "version": "4.0.9",
+    "version": "4.0.10",
     "developers": [
       "cpw"
     ],
@@ -584,27 +614,27 @@
         "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
       }
     ],
-    "dependency": "net.minecraftforge:forgespi:4.0.9"
+    "dependency": "net.minecraftforge:forgespi:4.0.10"
   },
   {
     "project": "Gson",
     "description": null,
-    "version": "2.8.0",
+    "version": "2.8.8",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [
       {
         "license": "Apache 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "com.google.code.gson:gson:2.8.0"
+    "dependency": "com.google.code.gson:gson:2.8.8"
   },
   {
-    "project": "Guava: Google Core Libraries for Java",
-    "description": "Guava is a suite of core and expanded libraries that include\n    utility classes, google\u0027s collections, io classes, and much\n    much more.\n\n    Guava has only one code dependency - javax.annotation,\n    per the JSR-305 spec.",
-    "version": "21.0",
+    "project": "Guava InternalFutureFailureAccess and InternalFutures",
+    "description": "Contains\n    com.google.common.util.concurrent.internal.InternalFutureFailureAccess and\n    InternalFutures. Most users will never need to use this artifact. Its\n    classes is conceptually a part of Guava, but they\u0027re in this separate\n    artifact so that Android libraries can use them without pulling in all of\n    Guava (just as they can use ListenableFuture by depending on the\n    listenablefuture artifact).",
+    "version": "1.0.1",
     "developers": [],
     "url": null,
     "year": null,
@@ -614,12 +644,42 @@
         "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "com.google.guava:guava:21.0"
+    "dependency": "com.google.guava:failureaccess:1.0.1"
+  },
+  {
+    "project": "Guava ListenableFuture only",
+    "description": "An empty artifact that Guava depends on to signal that it is providing\n    ListenableFuture -- but is also available in a second \"version\" that\n    contains com.google.common.util.concurrent.ListenableFuture class, without\n    any other Guava classes. The idea is:\n\n    - If users want only ListenableFuture, they depend on listenablefuture-1.0.\n\n    - If users want all of Guava, they depend on guava, which, as of Guava\n    27.0, depends on\n    listenablefuture-9999.0-empty-to-avoid-conflict-with-guava. The 9999.0-...\n    version number is enough for some build systems (notably, Gradle) to select\n    that empty artifact over the \"real\" listenablefuture-1.0 -- avoiding a\n    conflict with the copy of ListenableFuture in guava itself. If users are\n    using an older version of Guava or a build system other than Gradle, they\n    may see class conflicts. If so, they can solve them by manually excluding\n    the listenablefuture artifact or manually forcing their build systems to\n    use 9999.0-....",
+    "version": "9999.0-empty-to-avoid-conflict-with-guava",
+    "developers": [],
+    "url": null,
+    "year": null,
+    "licenses": [
+      {
+        "license": "The Apache Software License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+  },
+  {
+    "project": "Guava: Google Core Libraries for Java",
+    "description": "Guava is a suite of core and expanded libraries that include\n    utility classes, Google\u0027s collections, I/O classes, and\n    much more.",
+    "version": "31.0.1-jre",
+    "developers": [],
+    "url": "https://github.com/google/guava",
+    "year": null,
+    "licenses": [
+      {
+        "license": "Apache License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.google.guava:guava:31.0.1-jre"
   },
   {
     "project": "ICU4J",
     "description": "International Component for Unicode for Java (ICU4J) is a mature, widely used Java library\n    providing Unicode and Globalization support",
-    "version": "66.1",
+    "version": "69.1",
     "developers": [
       "Mark Davis",
       "John Emmons",
@@ -638,12 +698,27 @@
         "license_url": "https://raw.githubusercontent.com/unicode-org/icu/master/icu4c/LICENSE"
       }
     ],
-    "dependency": "com.ibm.icu:icu4j:66.1"
+    "dependency": "com.ibm.icu:icu4j:69.1"
+  },
+  {
+    "project": "J2ObjC Annotations",
+    "description": "A set of annotations that provide additional information to the J2ObjC\n    translator to modify the result of translation.",
+    "version": "1.3",
+    "developers": [],
+    "url": "https://github.com/google/j2objc/",
+    "year": null,
+    "licenses": [
+      {
+        "license": "The Apache Software License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.google.j2objc:j2objc-annotations:1.3"
   },
   {
     "project": "Java Native Access",
     "description": "Java Native Access",
-    "version": "5.8.0",
+    "version": "5.9.0",
     "developers": [
       "Timothy Wall",
       "Matthias Bläsing"
@@ -652,20 +727,20 @@
     "year": null,
     "licenses": [
       {
-        "license": "LGPL, version 2.1",
-        "license_url": "http://www.gnu.org/licenses/licenses.html"
+        "license": "LGPL-2.1-or-later",
+        "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1"
       },
       {
-        "license": "Apache License v2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license": "Apache-2.0",
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "net.java.dev.jna:jna:5.8.0"
+    "dependency": "net.java.dev.jna:jna:5.9.0"
   },
   {
     "project": "Java Native Access Platform",
     "description": "Java Native Access Platform",
-    "version": "5.8.0",
+    "version": "5.9.0",
     "developers": [
       "Timothy Wall",
       "Matthias Bläsing"
@@ -674,15 +749,15 @@
     "year": null,
     "licenses": [
       {
-        "license": "LGPL, version 2.1",
-        "license_url": "http://www.gnu.org/licenses/licenses.html"
+        "license": "LGPL-2.1-or-later",
+        "license_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1"
       },
       {
-        "license": "Apache License v2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        "license": "Apache-2.0",
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "net.java.dev.jna:jna-platform:5.8.0"
+    "dependency": "net.java.dev.jna:jna-platform:5.9.0"
   },
   {
     "project": "Java Objective-C Bridge",
@@ -704,17 +779,17 @@
   {
     "project": "javabridge",
     "description": null,
-    "version": "1.1.23",
+    "version": "1.2.24",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "com.mojang:javabridge:1.1.23"
+    "dependency": "com.mojang:javabridge:1.2.24"
   },
   {
     "project": "javafmllanguage",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.17.1-37.0.13",
+    "version": "1.18-38.0.12",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -724,41 +799,24 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:javafmllanguage:1.17.1-37.0.13"
+    "dependency": "net.minecraftforge:javafmllanguage:1.18-38.0.12"
   },
   {
-    "project": "JInput",
-    "description": "Library for access to input devices.",
-    "version": "2.0.5",
+    "project": "JetBrains Java Annotations",
+    "description": "A set of annotations used for code inspection support and code documentation.",
+    "version": "23.0.0",
     "developers": [
-      ""
+      "JetBrains Team"
     ],
-    "url": "http://java.net/projects/jinput",
+    "url": "https://github.com/JetBrains/java-annotations",
     "year": null,
     "licenses": [
       {
-        "license": "BSD",
-        "license_url": "http://www.opensource.org/licenses/bsd-license.php"
+        "license": "The Apache Software License, Version 2.0",
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "net.java.jinput:jinput:2.0.5"
-  },
-  {
-    "project": "JInput natives",
-    "description": "Library for access to input devices.",
-    "version": "2.0.5",
-    "developers": [
-      ""
-    ],
-    "url": "http://java.net/projects/jinput",
-    "year": null,
-    "licenses": [
-      {
-        "license": "BSD",
-        "license_url": "http://www.opensource.org/licenses/bsd-license.php"
-      }
-    ],
-    "dependency": "net.java.jinput:jinput-platform:2.0.5"
+    "dependency": "org.jetbrains:annotations:23.0.0"
   },
   {
     "project": "JLine Reader",
@@ -944,12 +1002,12 @@
   {
     "project": "mappings_official",
     "description": null,
-    "version": "1.17.1",
+    "version": "1.18",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:mappings_official:1.17.1"
+    "dependency": "net.minecraft:mappings_official:1.18"
   },
   {
     "project": "Maven Artifact",
@@ -969,7 +1027,7 @@
   {
     "project": "mclanguage",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.17.1-37.0.13",
+    "version": "1.18-38.0.12",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -979,7 +1037,7 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:mclanguage:1.17.1-37.0.13"
+    "dependency": "net.minecraftforge:mclanguage:1.18-38.0.12"
   },
   {
     "project": "MergeTool",
@@ -999,6 +1057,21 @@
     "dependency": "net.minecraftforge:mergetool:1.1.3"
   },
   {
+    "project": "mixin",
+    "description": "Mixin",
+    "version": "0.8.5",
+    "developers": [],
+    "url": "http://www.spongepowered.org/",
+    "year": null,
+    "licenses": [
+      {
+        "license": "MIT license",
+        "license_url": "http://opensource.org/licenses/MIT"
+      }
+    ],
+    "dependency": "org.spongepowered:mixin:0.8.5"
+  },
+  {
     "project": "Mod Launcher",
     "description": "Common ModLauncher framework",
     "version": "9.0.7",
@@ -1013,22 +1086,22 @@
   {
     "project": "Netty/All-in-One",
     "description": null,
-    "version": "4.1.25.Final",
+    "version": "4.1.68.Final",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [
       {
         "license": "Apache License, Version 2.0",
-        "license_url": "http://www.apache.org/licenses/LICENSE-2.0"
+        "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     ],
-    "dependency": "io.netty:netty-all:4.1.25.Final"
+    "dependency": "io.netty:netty-all:4.1.68.Final"
   },
   {
     "project": "NightConfig core",
     "description": "Powerful, easy-to-use and multi-language configuration library for the JVM - core module",
-    "version": "3.6.3",
+    "version": "3.6.4",
     "developers": [
       ""
     ],
@@ -1040,12 +1113,12 @@
         "license_url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
       }
     ],
-    "dependency": "com.electronwill.night-config:core:3.6.3"
+    "dependency": "com.electronwill.night-config:core:3.6.4"
   },
   {
     "project": "NightConfig toml",
     "description": "Powerful, easy-to-use and multi-language configuration library for the JVM - toml module",
-    "version": "3.6.3",
+    "version": "3.6.4",
     "developers": [
       ""
     ],
@@ -1057,12 +1130,12 @@
         "license_url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
       }
     ],
-    "dependency": "com.electronwill.night-config:toml:3.6.3"
+    "dependency": "com.electronwill.night-config:toml:3.6.4"
   },
   {
     "project": "OpenJDK Nashorn",
     "description": "Nashorn is an Open Source JavaScript (ECMAScript 5.1 and some 6 features) engine for the JVM.",
-    "version": "15.1.1",
+    "version": "15.3",
     "developers": [
       "Attila Szegedi"
     ],
@@ -1074,12 +1147,12 @@
         "license_url": "https://github.com/openjdk/nashorn/blob/main/LICENSE"
       }
     ],
-    "dependency": "org.openjdk.nashorn:nashorn-core:15.1.1"
+    "dependency": "org.openjdk.nashorn:nashorn-core:15.3"
   },
   {
     "project": "oshi-core",
     "description": null,
-    "version": "5.7.5",
+    "version": "5.8.2",
     "developers": [],
     "url": null,
     "year": null,
@@ -1089,7 +1162,7 @@
         "license_url": "https://opensource.org/licenses/MIT"
       }
     ],
-    "dependency": "com.github.oshi:oshi-core:5.7.5"
+    "dependency": "com.github.oshi:oshi-core:5.8.2"
   },
   {
     "project": "patchy",
@@ -1119,14 +1192,14 @@
   {
     "project": "Secure Modular Jar handler",
     "description": "Making the Java modular system provide security information",
-    "version": "0.9.46",
+    "version": "0.9.54",
     "developers": [
       "cpw"
     ],
     "url": "https://github.com/cpw/securejarhandler",
     "year": null,
     "licenses": [],
-    "dependency": "cpw.mods:securejarhandler:0.9.46"
+    "dependency": "cpw.mods:securejarhandler:0.9.54"
   },
   {
     "project": "SLF4J API Module",

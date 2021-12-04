@@ -8,12 +8,12 @@ import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.server.ServerStartedEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.event.server.ServerStoppedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
-import net.minecraftforge.fmlserverevents.FMLServerStartedEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStoppedEvent;
+import net.minecraftforge.server.ServerLifecycleHooks;
 
 import java.util.Timer;
 
@@ -27,7 +27,7 @@ public class ForgeEventHandler {
 	
 	
 	@SubscribeEvent
-	public static void handlerServerStartingEvent( FMLServerStartingEvent event ) {
+	public static void handlerServerStartingEvent( ServerStartingEvent event ) {
 		
 		ServerRestarter.createExceptionFile();
 	}
@@ -39,7 +39,7 @@ public class ForgeEventHandler {
 	}
 	
 	@SubscribeEvent
-	public static void handleServerStartedEvent( FMLServerStartedEvent event ) {
+	public static void handleServerStartedEvent( ServerStartedEvent event ) {
 		
 		new Timer( true ).scheduleAtFixedRate( new AutoRestartTask( event.getServer() ), 60 * 1000, 1000 );
 	}
@@ -59,7 +59,7 @@ public class ForgeEventHandler {
 	}
 	
 	@SubscribeEvent
-	public static void handleServerStoppedEvent( FMLServerStoppedEvent event ) {
+	public static void handleServerStoppedEvent( ServerStoppedEvent event ) {
 		
 		if( ServerRestarter.shouldDoRestart() ) {
 			ServerRestarter.restartServer();
