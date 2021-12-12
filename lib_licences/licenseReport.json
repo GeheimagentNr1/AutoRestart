@@ -260,7 +260,7 @@
   {
     "project": "Apache Log4j API",
     "description": "The Apache Log4j API",
-    "version": "2.14.1",
+    "version": "2.15.0",
     "developers": [],
     "url": null,
     "year": null,
@@ -270,12 +270,12 @@
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "org.apache.logging.log4j:log4j-api:2.14.1"
+    "dependency": "org.apache.logging.log4j:log4j-api:2.15.0"
   },
   {
     "project": "Apache Log4j Core",
     "description": "The Apache Log4j Implementation",
-    "version": "2.14.1",
+    "version": "2.15.0",
     "developers": [],
     "url": null,
     "year": null,
@@ -285,12 +285,12 @@
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "org.apache.logging.log4j:log4j-core:2.14.1"
+    "dependency": "org.apache.logging.log4j:log4j-core:2.15.0"
   },
   {
     "project": "Apache Log4j SLF4J 1.8+ Binding",
     "description": "The Apache Log4j SLF4J 1.8 API binding to Log4j 2 Core",
-    "version": "2.14.1",
+    "version": "2.15.0",
     "developers": [],
     "url": null,
     "year": null,
@@ -300,7 +300,7 @@
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "dependency": "org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1"
+    "dependency": "org.apache.logging.log4j:log4j-slf4j18-impl:2.15.0"
   },
   {
     "project": "asm",
@@ -460,12 +460,12 @@
   {
     "project": "client",
     "description": null,
-    "version": "1.18",
+    "version": "1.18.1",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:client:1.18"
+    "dependency": "net.minecraft:client:1.18.1"
   },
   {
     "project": "Core Mods",
@@ -562,7 +562,7 @@
   {
     "project": "fmlcore",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.18-38.0.12",
+    "version": "1.18.1-39.0.0",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -572,12 +572,12 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:fmlcore:1.18-38.0.12"
+    "dependency": "net.minecraftforge:fmlcore:1.18.1-39.0.0"
   },
   {
     "project": "fmlloader",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.18-38.0.12",
+    "version": "1.18.1-39.0.0",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -587,17 +587,17 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:fmlloader:1.18-38.0.12"
+    "dependency": "net.minecraftforge:fmlloader:1.18.1-39.0.0"
   },
   {
     "project": "forge",
     "description": null,
-    "version": "1.18-38.0.12_mapped_official_1.18",
+    "version": "1.18.1-39.0.0_mapped_official_1.18.1",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraftforge:forge:1.18-38.0.12_mapped_official_1.18"
+    "dependency": "net.minecraftforge:forge:1.18.1-39.0.0_mapped_official_1.18.1"
   },
   {
     "project": "Forge Service Provider Interface",
@@ -789,7 +789,7 @@
   {
     "project": "javafmllanguage",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.18-38.0.12",
+    "version": "1.18.1-39.0.0",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -799,7 +799,7 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:javafmllanguage:1.18-38.0.12"
+    "dependency": "net.minecraftforge:javafmllanguage:1.18.1-39.0.0"
   },
   {
     "project": "JetBrains Java Annotations",
@@ -1002,12 +1002,12 @@
   {
     "project": "mappings_official",
     "description": null,
-    "version": "1.18",
+    "version": "1.18.1",
     "developers": [],
     "url": null,
     "year": null,
     "licenses": [],
-    "dependency": "net.minecraft:mappings_official:1.18"
+    "dependency": "net.minecraft:mappings_official:1.18.1"
   },
   {
     "project": "Maven Artifact",
@@ -1027,7 +1027,7 @@
   {
     "project": "mclanguage",
     "description": "Modifactions to Minecraft to enable mod developers.",
-    "version": "1.18-38.0.12",
+    "version": "1.18.1-39.0.0",
     "developers": [],
     "url": "https://github.com/MinecraftForge/MinecraftForge",
     "year": null,
@@ -1037,7 +1037,7 @@
         "license_url": "https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt"
       }
     ],
-    "dependency": "net.minecraftforge:mclanguage:1.18-38.0.12"
+    "dependency": "net.minecraftforge:mclanguage:1.18.1-39.0.0"
   },
   {
     "project": "MergeTool",
