@@ -24,27 +24,27 @@ Apache HttpCore,Apache HttpComponents Core (blocking I/O),4.4.14,null,http://hc.
 Apache Log4j API,The Apache Log4j API,2.17.1,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.logging.log4j:log4j-api:2.17.1
 Apache Log4j Core,The Apache Log4j Implementation,2.17.1,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.logging.log4j:log4j-core:2.17.1
 Apache Log4j SLF4J 1.8+ Binding,The Apache Log4j SLF4J 1.8 API binding to Log4j 2 Core,2.17.0,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.logging.log4j:log4j-slf4j18-impl:2.17.0
-asm,ASM, a very small and fast Java bytecode manipulation framework,9.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm:9.2
-asm-analysis,Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework,9.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-analysis:9.2
-asm-commons,Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework,9.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-commons:9.2
-asm-tree,Tree API of ASM, a very small and fast Java bytecode manipulation framework,9.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-tree:9.2
-asm-util,Utilities for ASM, a very small and fast Java bytecode manipulation framework,9.2,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-util:9.2
-authlib,null,3.3.39,null,null,null,null,null,com.mojang:authlib:3.3.39
+asm,ASM, a very small and fast Java bytecode manipulation framework,9.3,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm:9.3
+asm-analysis,Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework,9.3,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-analysis:9.3
+asm-commons,Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework,9.3,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-commons:9.3
+asm-tree,Tree API of ASM, a very small and fast Java bytecode manipulation framework,9.3,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-tree:9.3
+asm-util,Utilities for ASM, a very small and fast Java bytecode manipulation framework,9.3,"Eric Bruneton,Eugene Kuleshov,Remi Forax",http://asm.ow2.io/,2000,BSD-3-Clause,https://asm.ow2.io/license.html,org.ow2.asm:asm-util:9.3
+authlib,null,3.5.41,null,null,null,null,null,com.mojang:authlib:3.5.41
 blocklist,null,1.0.10,null,null,null,null,null,com.mojang:blocklist:1.0.10
 Bootstrap launcher,Allows bootstrapping a modularized environment from a classpath one,1.0.0,cpw,https://github.com/McModLauncher/bootstraplauncher,null,null,null,cpw.mods:bootstraplauncher:1.0.0
 brigadier,null,1.0.18,null,null,null,null,null,com.mojang:brigadier:1.0.18
 Checker Qual,checker-qual contains annotations (type qualifiers) that a programmer
 writes to specify Java code for type-checking by the Checker Framework.,3.12.0,"Michael Ernst,Suzanne Millstein",https://checkerframework.org,null,The MIT License,http://opensource.org/licenses/MIT,org.checkerframework:checker-qual:3.12.0
-client,null,1.18.2,null,null,null,null,null,net.minecraft:client:1.18.2
-Core Mods,Core modding framework for use with forge,5.0.2,cpw,https://github.com/MinecraftForge/coremods,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:coremods:5.0.2
-datafixerupper,null,4.1.27,null,null,null,null,null,com.mojang:datafixerupper:4.1.27
+client,null,1.19,null,null,null,null,null,net.minecraft:client:1.19
+Core Mods,Core modding framework for use with forge,5.0.1,cpw,https://github.com/MinecraftForge/coremods,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:coremods:5.0.1
+datafixerupper,null,5.0.28,null,null,null,null,null,com.mojang:datafixerupper:5.0.28
 error-prone annotations,null,2.7.1,null,null,null,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.errorprone:error_prone_annotations:2.7.1
-Event Bus,High performance Event Bus library,5.0.7,"cpw,LexManos",https://github.com/MinecraftForge/eventbus,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:eventbus:5.0.7
+Event Bus,High performance Event Bus library,5.0.3,"cpw,LexManos",https://github.com/MinecraftForge/eventbus,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:eventbus:5.0.3
 fastutil,fastutil extends the Java Collections Framework by providing type-specific maps, sets, lists and priority queues with a small memory footprint and fast access and insertion; provides also big (64-bit) arrays, sets and lists, sorting algorithms, and fast, practical I/O classes for binary and text files. Note that if you have both this jar and fastutil-core.jar in your dependencies, fastutil-core.jar should be excluded.,8.5.6,Sebastiano Vigna,http://fastutil.di.unimi.it/,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.html,it.unimi.dsi:fastutil:8.5.6
 FindBugs-jsr305,JSR305 Annotations for Findbugs,3.0.2,null,http://findbugs.sourceforge.net/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.findbugs:jsr305:3.0.2
-fmlcore,Modifactions to Minecraft to enable mod developers.,1.18.2-40.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:fmlcore:1.18.2-40.0.12
-fmlloader,Modifactions to Minecraft to enable mod developers.,1.18.2-40.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:fmlloader:1.18.2-40.0.12
-forge,null,1.18.2-40.0.12_mapped_official_1.18.2,null,null,null,null,null,net.minecraftforge:forge:1.18.2-40.0.12_mapped_official_1.18.2
+fmlcore,Modifactions to Minecraft to enable mod developers.,1.19-41.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:fmlcore:1.19-41.0.12
+fmlloader,Modifactions to Minecraft to enable mod developers.,1.19-41.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:fmlloader:1.19-41.0.12
+forge,null,1.19-41.0.12_mapped_official_1.19,null,null,null,null,null,net.minecraftforge:forge:1.19-41.0.12_mapped_official_1.19
 Forge Service Provider Interface,API for services which can plug into forge, or which are used by forge in other places,4.0.11,cpw,https://github.com/MinecraftForge/ForgeSPI,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:forgespi:4.0.11
 Gson,null,2.8.9,null,null,null,Apache-2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,com.google.code.gson:gson:2.8.9
 Guava InternalFutureFailureAccess and InternalFutures,Contains
@@ -78,41 +78,49 @@ ICU4J,International Component for Unicode for Java (ICU4J) is a mature, widely u
     providing Unicode and Globalization support,70.1,"Mark Davis,John Emmons,Doug Felt,Deborah Goldsmith,Steven Loomis,Markus Scherer,Peter Edberg,Yoshito Umaoka",https://icu.unicode.org/,2001,Unicode/ICU License,https://raw.githubusercontent.com/unicode-org/icu/main/icu4c/LICENSE,com.ibm.icu:icu4j:70.1
 J2ObjC Annotations,A set of annotations that provide additional information to the J2ObjC
     translator to modify the result of translation.,1.3,null,https://github.com/google/j2objc/,null,The Apache Software License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,com.google.j2objc:j2objc-annotations:1.3
-Java Native Access,Java Native Access,5.10.0,"Timothy Wall,Matthias Bläsing",https://github.com/java-native-access/jna,null,"LGPL-2.1-or-later,Apache-2.0","https://www.gnu.org/licenses/old-licenses/lgpl-2.1,https://www.apache.org/licenses/LICENSE-2.0.txt",net.java.dev.jna:jna:5.10.0
-Java Native Access Platform,Java Native Access Platform,5.10.0,"Timothy Wall,Matthias Bläsing",https://github.com/java-native-access/jna,null,"LGPL-2.1-or-later,Apache-2.0","https://www.gnu.org/licenses/old-licenses/lgpl-2.1,https://www.apache.org/licenses/LICENSE-2.0.txt",net.java.dev.jna:jna-platform:5.10.0
+Java Native Access,Java Native Access,5.10.0,"Timothy Wall,Matthias BlÃ¤sing",https://github.com/java-native-access/jna,null,"LGPL-2.1-or-later,Apache-2.0","https://www.gnu.org/licenses/old-licenses/lgpl-2.1,https://www.apache.org/licenses/LICENSE-2.0.txt",net.java.dev.jna:jna:5.10.0
+Java Native Access Platform,Java Native Access Platform,5.10.0,"Timothy Wall,Matthias BlÃ¤sing",https://github.com/java-native-access/jna,null,"LGPL-2.1-or-later,Apache-2.0","https://www.gnu.org/licenses/old-licenses/lgpl-2.1,https://www.apache.org/licenses/LICENSE-2.0.txt",net.java.dev.jna:jna-platform:5.10.0
 Java Objective-C Bridge,A thin bridge that allows for two-way communication from Java to Objective-C.,1.0.0,Steve Hannah,https://github.com/shannah/Java-Objective-C-Bridge,2012,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,ca.weblite:java-objc-bridge:1.0.0
 javabridge,null,1.2.24,null,null,null,null,null,com.mojang:javabridge:1.2.24
-javafmllanguage,Modifactions to Minecraft to enable mod developers.,1.18.2-40.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:javafmllanguage:1.18.2-40.0.12
+javafmllanguage,Modifactions to Minecraft to enable mod developers.,1.19-41.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:javafmllanguage:1.19-41.0.12
 JetBrains Java Annotations,A set of annotations used for code inspection support and code documentation.,23.0.0,JetBrains Team,https://github.com/JetBrains/java-annotations,null,The Apache Software License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.jetbrains:annotations:23.0.0
 JLine Reader,null,3.12.1,null,null,null,The BSD License,https://opensource.org/licenses/BSD-3-Clause,org.jline:jline-reader:3.12.1
 JLine Terminal,null,3.12.1,null,null,null,The BSD License,https://opensource.org/licenses/BSD-3-Clause,org.jline:jline-terminal:3.12.1
 JOpt Simple,A Java library for parsing command line options,5.0.4,Paul Holser,http://jopt-simple.github.io/jopt-simple,null,The MIT License,http://www.opensource.org/licenses/mit-license.php,net.sf.jopt-simple:jopt-simple:5.0.4
 JSR 353 (JSON Processing) Default Provider,Default provider for JSR 353:Java API for Processing JSON,1.0.4,null,http://jsonp.java.net,null,Dual license consisting of the CDDL v1.1 and GPL v2,https://glassfish.java.net/public/CDDL+GPL_1_1.html,org.glassfish:javax.json:1.0.4
 logging,null,1.0.0,null,null,null,null,null,com.mojang:logging:1.0.0
-LWJGL,The LWJGL core library.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl:3.2.2
-LWJGL - GLFW bindings,A multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-glfw:3.2.2
-LWJGL - jemalloc bindings,A general purpose malloc implementation that emphasizes fragmentation avoidance and scalable concurrency support.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-jemalloc:3.2.2
-LWJGL - OpenAL bindings,A cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-openal:3.2.2
-LWJGL - OpenGL bindings,The most widely adopted 2D and 3D graphics API in the industry, bringing thousands of applications to a wide variety of computer platforms.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-opengl:3.2.2
-LWJGL - stb bindings,Single-file public domain libraries for fonts, images, ogg vorbis files and more.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-stb:3.2.2
-LWJGL - Tiny File Dialogs bindings,Provides basic modal dialogs.,3.2.2,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-tinyfd:3.2.2
-mappings_official,null,1.18.2,null,null,null,null,null,net.minecraft:mappings_official:1.18.2
-Maven Artifact,null,3.8.1,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.maven:maven-artifact:3.8.1
-mclanguage,Modifactions to Minecraft to enable mod developers.,1.18.2-40.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:mclanguage:1.18.2-40.0.12
-MergeTool,Merges two jar files together, useful for rebuilding Retroguard stripped jars.,1.1.3,Lex Manos,https://github.com/MinecraftForge/MergeTool,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:mergetool:1.1.3
+lowcodelanguage,Modifactions to Minecraft to enable mod developers.,1.19-41.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:lowcodelanguage:1.19-41.0.12
+LWJGL,The LWJGL core library.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl:3.3.1
+LWJGL - GLFW bindings,A multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-glfw:3.3.1
+LWJGL - jemalloc bindings,A general purpose malloc implementation that emphasizes fragmentation avoidance and scalable concurrency support.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-jemalloc:3.3.1
+LWJGL - OpenAL bindings,A cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-openal:3.3.1
+LWJGL - OpenGL bindings,The most widely adopted 2D and 3D graphics API in the industry, bringing thousands of applications to a wide variety of computer platforms.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-opengl:3.3.1
+LWJGL - stb bindings,Single-file public domain libraries for fonts, images, ogg vorbis files and more.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-stb:3.3.1
+LWJGL - Tiny File Dialogs bindings,Provides basic modal dialogs.,3.3.1,Ioannis Tsakpinis,https://www.lwjgl.org,null,BSD,https://www.lwjgl.org/license,org.lwjgl:lwjgl-tinyfd:3.3.1
+mappings_official,null,1.19,null,null,null,null,null,net.minecraft:mappings_official:1.19
+Maven Artifact,null,3.8.5,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0.txt,org.apache.maven:maven-artifact:3.8.5
+mclanguage,Modifactions to Minecraft to enable mod developers.,1.19-41.0.12,null,https://github.com/MinecraftForge/MinecraftForge,null,LGPL 2.1,https://github.com/MinecraftForge/MinecraftForge/blob/1.13-pre/LICENSE.txt,net.minecraftforge:mclanguage:1.19-41.0.12
+MergeTool,Merges two jar files together, useful for rebuilding Retroguard stripped jars.,1.1.5,Lex Manos,https://github.com/MinecraftForge/MergeTool,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:mergetool:1.1.5
 mixin,Mixin,0.8.5,null,http://www.spongepowered.org/,null,MIT license,http://opensource.org/licenses/MIT,org.spongepowered:mixin:0.8.5
-Mod Launcher,Common ModLauncher framework,9.1.3,cpw,https://github.com/McModLauncher/modlauncher,null,null,null,cpw.mods:modlauncher:9.1.3
-Netty/All-in-One,null,4.1.68.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-all:4.1.68.Final
+Mod Launcher,Common ModLauncher framework,9.1.6,cpw,https://github.com/McModLauncher/modlauncher,null,null,null,cpw.mods:modlauncher:9.1.6
+Netty/Buffer,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-buffer:4.1.77.Final
+Netty/Codec,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-codec:4.1.77.Final
+Netty/Common,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-common:4.1.77.Final
+Netty/Handler,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-handler:4.1.77.Final
+Netty/Resolver,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-resolver:4.1.77.Final
+Netty/Transport,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-transport:4.1.77.Final
+Netty/Transport/Classes/Epoll,null,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-transport-classes-epoll:4.1.77.Final
+Netty/Transport/Native/Unix/Common,Static library which contains common unix utilities.,4.1.77.Final,null,null,null,Apache License, Version 2.0,https://www.apache.org/licenses/LICENSE-2.0,io.netty:netty-transport-native-unix-common:4.1.77.Final
 NightConfig core,Powerful, easy-to-use and multi-language configuration library for the JVM - core module,3.6.4,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:core:3.6.4
 NightConfig toml,Powerful, easy-to-use and multi-language configuration library for the JVM - toml module,3.6.4,,https://github.com/TheElectronWill/Night-Config,null,GNU Lesser General Public License v3.0,https://www.gnu.org/licenses/lgpl-3.0.txt,com.electronwill.night-config:toml:3.6.4
 OpenJDK Nashorn,Nashorn is an Open Source JavaScript (ECMAScript 5.1 and some 6 features) engine for the JVM.,15.3,Attila Szegedi,https://github.com/openjdk/nashorn,null,GPL v2 with the Classpath exception,https://github.com/openjdk/nashorn/blob/main/LICENSE,org.openjdk.nashorn:nashorn-core:15.3
 oshi-core,null,5.8.5,null,null,null,MIT License,https://opensource.org/licenses/MIT,com.github.oshi:oshi-core:5.8.5
 patchy,null,2.2.10,null,null,null,null,null,com.mojang:patchy:2.2.10
 Plexus Common Utilities,A collection of various utility classes to ease working with strings, files, command lines, XML and
-    more.,3.2.1,null,null,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,org.codehaus.plexus:plexus-utils:3.2.1
-Secure Modular Jar handler,Making the Java modular system provide security information,1.0.3,cpw,https://github.com/McModLauncher/securejarhandler,null,null,null,cpw.mods:securejarhandler:1.0.3
+    more.,3.3.0,null,null,null,Apache License, Version 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,org.codehaus.plexus:plexus-utils:3.3.0
+Secure Modular Jar handler,Making the Java modular system provide security information,1.0.5,cpw,https://github.com/McModLauncher/securejarhandler,null,null,null,cpw.mods:securejarhandler:1.0.5
 SLF4J API Module,The slf4j API,1.8.0-beta4,null,http://www.slf4j.org,null,MIT License,http://www.opensource.org/licenses/mit-license.php,org.slf4j:slf4j-api:1.8.0-beta4
-SRG Utils,Library for managing java obfusication mappings in various formats.,0.4.3,LexManos,https://github.com/MinecraftForge/SrgUtils,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:srgutils:0.4.3
+SRG Utils,Library for managing java obfuscation mappings in various formats.,0.4.11,LexManos,https://github.com/MinecraftForge/SrgUtils,null,LGPLv2.1,https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt,net.minecraftforge:srgutils:0.4.11
 StringTemplate 4,StringTemplate is a java template engine for generating source code,
 		web pages, emails, or any other formatted text output.
 
@@ -128,6 +136,6 @@ StringTemplate 4,StringTemplate is a java template engine for generating source 
 		and maintainable; it also provides an excellent defense against malicious
 		template authors.,4.3,null,null,null,null,null,org.antlr:ST4:4.3
 TerminalConsoleAppender,JLine 3 appender for Log4j2, allows extending command line apps using colors and command completion,1.2.0,Minecrell,https://github.com/Minecrell/TerminalConsoleAppender,null,MIT License,https://opensource.org/licenses/MIT,net.minecrell:terminalconsoleappender:1.2.0
-text2speech,null,1.12.4,null,null,null,null,null,com.mojang:text2speech:1.12.4
+text2speech,null,1.13.9,null,null,null,null,null,com.mojang:text2speech:1.13.9
 Typetools,Typetools for reading lambda metadata,0.8.3,jhalterman,https://github.com/MinecraftForge/typetools,null,null,null,net.jodah:typetools:0.8.3
 Unsafe,Unsafe hacks for forge,0.2.0,cpw,https://github.com/MinecraftForge/Unsafe,null,null,null,net.minecraftforge:unsafe:0.2.0

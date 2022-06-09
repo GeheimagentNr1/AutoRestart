@@ -6,10 +6,9 @@ import de.geheimagentnr1.auto_restart.config.Timing;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import de.geheimagentnr1.auto_restart.util.TpsHelper;
 import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
 import net.minecraft.network.chat.ChatType;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import org.apache.logging.log4j.LogManager;
@@ -90,13 +89,12 @@ public class AutoRestartTask extends TimerTask {
 				Duration difference = autoRestartTime.getDifferenceTo( current_time );
 				for( Timing warning_time : ServerConfig.getAutoRestartWarningTimes() ) {
 					if( difference.getSeconds() == warning_time.getSeconds() ) {
-						server.getPlayerList().broadcastMessage(
-							new TextComponent( String.format(
+						server.getPlayerList().broadcastSystemMessage(
+							Component.literal( String.format(
 								"Restarting in %s...",
 								warning_time.getDisplayString()
 							) ).setStyle( Style.EMPTY.withColor( ChatFormatting.YELLOW ) ),
-							ChatType.SYSTEM,
-							Util.NIL_UUID
+							ChatType.SYSTEM
 						);
 					}
 				}
