@@ -91,7 +91,7 @@ authlib (3.5.41)
 
 blocklist (1.0.10)
 
-Bootstrap launcher (1.0.0)
+Bootstrap launcher (1.1.2)
 Allows bootstrapping a modularized environment from a classpath one
 https://github.com/McModLauncher/bootstraplauncher
 
@@ -112,7 +112,7 @@ datafixerupper (5.0.28)
 
 error-prone annotations (2.7.1) - Apache 2.0
 
-Event Bus (5.0.3) - LGPLv2.1
+Event Bus (6.0.0) - LGPLv2.1
 High performance Event Bus library
 https://github.com/MinecraftForge/eventbus
 
@@ -124,17 +124,17 @@ FindBugs-jsr305 (3.0.2) - The Apache Software License, Version 2.0
 JSR305 Annotations for Findbugs
 http://findbugs.sourceforge.net/
 
-fmlcore (1.19-41.0.12) - LGPL 2.1
+fmlcore (1.19-41.0.100) - LGPL 2.1
 Modifactions to Minecraft to enable mod developers.
 https://github.com/MinecraftForge/MinecraftForge
 
-fmlloader (1.19-41.0.12) - LGPL 2.1
+fmlloader (1.19-41.0.100) - LGPL 2.1
 Modifactions to Minecraft to enable mod developers.
 https://github.com/MinecraftForge/MinecraftForge
 
-forge (1.19-41.0.12_mapped_official_1.19)
+forge (1.19-41.0.100_mapped_official_1.19)
 
-Forge Service Provider Interface (4.0.11) - LGPLv2.1
+Forge Service Provider Interface (6.0.0) - LGPLv2.1
 API for services which can plug into forge, or which are used by forge in other places
 https://github.com/MinecraftForge/ForgeSPI
 
@@ -184,6 +184,10 @@ providing Unicode and Globalization support
 translator to modify the result of translation.
       https://github.com/google/j2objc/
 
+JarJar (0.3.0) - LGPL 2.1
+Jar in Jar Utilities including the required NIO FileSystems.
+https://github.com/MinecraftForge/JarJar
+
 Java Native Access (5.10.0) - LGPL-2.1-or-later,Apache-2.0
 Java Native Access
 https://github.com/java-native-access/jna
@@ -198,7 +202,7 @@ https://github.com/shannah/Java-Objective-C-Bridge
 
 javabridge (1.2.24)
 
-javafmllanguage (1.19-41.0.12) - LGPL 2.1
+javafmllanguage (1.19-41.0.100) - LGPL 2.1
 Modifactions to Minecraft to enable mod developers.
 https://github.com/MinecraftForge/MinecraftForge
 
@@ -220,7 +224,7 @@ http://jsonp.java.net
 
 logging (1.0.0)
 
-lowcodelanguage (1.19-41.0.12) - LGPL 2.1
+lowcodelanguage (1.19-41.0.100) - LGPL 2.1
 Modifactions to Minecraft to enable mod developers.
 https://github.com/MinecraftForge/MinecraftForge
 
@@ -256,7 +260,7 @@ mappings_official (1.19)
 
 Maven Artifact (3.8.5) - Apache License, Version 2.0
 
-mclanguage (1.19-41.0.12) - LGPL 2.1
+mclanguage (1.19-41.0.100) - LGPL 2.1
 Modifactions to Minecraft to enable mod developers.
 https://github.com/MinecraftForge/MinecraftForge
 
@@ -268,7 +272,7 @@ mixin (0.8.5) - MIT license
 Mixin
 http://www.spongepowered.org/
 
-Mod Launcher (9.1.6)
+Mod Launcher (10.0.8)
 Common ModLauncher framework
 https://github.com/McModLauncher/modlauncher
 
@@ -297,6 +301,10 @@ NightConfig toml (3.6.4) - GNU Lesser General Public License v3.0
 Powerful, easy-to-use and multi-language configuration library for the JVM - toml module
 https://github.com/TheElectronWill/Night-Config
 
+NoException (1.7.1) - Apache License 2.0
+Makes exception handling concise and beautiful, yet architecturally clean and flexible.
+https://noexception.machinezoo.com/
+
 OpenJDK Nashorn (15.3) - GPL v2 with the Classpath exception
 Nashorn is an Open Source JavaScript (ECMAScript 5.1 and some 6 features) engine for the JVM.
 https://github.com/openjdk/nashorn
@@ -309,12 +317,16 @@ patchy (2.2.10)
       A collection of various utility classes to ease working with strings, files, command lines, XML and
 more.
 
-Secure Modular Jar handler (1.0.5)
+Secure Modular Jar handler (2.1.4)
 Making the Java modular system provide security information
 https://github.com/McModLauncher/securejarhandler
 
 SLF4J API Module (1.8.0-beta4) - MIT License
 The slf4j API
+http://www.slf4j.org
+
+SLF4J Simple Binding (1.7.30) - MIT License
+SLF4J Simple binding
 http://www.slf4j.org
 
 SRG Utils (0.4.11) - LGPLv2.1
