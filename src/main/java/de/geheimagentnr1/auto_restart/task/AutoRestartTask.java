@@ -94,7 +94,7 @@ public class AutoRestartTask extends TimerTask {
 								"Restarting in %s...",
 								warning_time.getDisplayString()
 							) ).setStyle( Style.EMPTY.withColor( ChatFormatting.YELLOW ) ),
-							ChatType.SYSTEM
+							false
 						);
 					}
 				}
