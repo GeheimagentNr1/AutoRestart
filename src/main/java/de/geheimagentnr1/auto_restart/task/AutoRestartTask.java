@@ -6,7 +6,6 @@ import de.geheimagentnr1.auto_restart.config.Timing;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import de.geheimagentnr1.auto_restart.util.TpsHelper;
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.server.MinecraftServer;
