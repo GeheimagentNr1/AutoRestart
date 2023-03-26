@@ -4,6 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
     id("com.jaredsburrows.license") version "0.9.0"
     id "net.linguica.maven-settings" version "0.5"
+    id("io.github.themrmilchmann.curseforge-publish") version "0.4.0"
 }
 
 delete "src/main/java/com"
@@ -38,7 +39,7 @@ minecraft {
     // See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
     //
     // Parchment is an unofficial project maintained by ParchmentMC, separate from MinecraftForge
-    // Additional setup is needed to use their mappings: https://github.com/ParchmentMC/Parchment/wiki/Getting-Started
+    // Additional setup is needed to use their mappings: https://parchmentmc.org/docs/getting-started
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
@@ -187,6 +188,7 @@ publishing {
     }
     repositories {
         maven {
+            name "local-test-repo"
             url "file:../ModdingMavenRepositories"
         }
         maven {
