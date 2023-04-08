@@ -4,7 +4,8 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
     id("com.jaredsburrows.license") version "0.9.0"
     id "net.linguica.maven-settings" version "0.5"
-    id("io.github.themrmilchmann.curseforge-publish") version "0.4.0"
+    id 'io.github.CDAGaming.cursegradle' version '1.6.0'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 delete "src/main/java/com"
@@ -18,12 +19,12 @@ task copyLicenses(type: Copy) {
     from 'build/reports/licenses'
     into 'lib_licences'
 }
-compileJava.dependsOn( copyLicenses )
-copyLicenses.dependsOn( "licenseReport" )
+compileJava.dependsOn(copyLicenses)
+copyLicenses.dependsOn("licenseReport")
 
 version = "${major_version}.${minor_version}.${patch_version}"
 group = "${domain}.${mod_id}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "${mod_id}"
+archivesBaseName = "${rootProject.name}"
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -200,4 +201,38 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+curseforge {
+    apiKey = "${curseforgeApiKey}"
+    project {
+        id = "${curseforge_project_id}"
+        changelogType = 'markdown'
+        changelog = rootProject.file('CHANGELOG.md').text
+        releaseType = 'release'
+        addGameVersion "${mc_version}"
+        if(Boolean.parseBoolean(usableOnClientSide)) {
+            addGameVersion 'Client'
+        }
+        if(Boolean.parseBoolean(usableOnServerSide)) {
+            addGameVersion 'Server'
+        }
+
+        mainArtifact(jar) {
+            it.displayName = "${mod_display_name} ${mc_version}-${version}"
+        }
+    }
+    options {
+        debug = Boolean.parseBoolean("${uploadDebug}")
+    }
+}
+
+modrinth {
+    token = "${modrinthToken}"
+    projectId = "${modrinth_project_it}"
+    versionNumber = "${mc_version}-${version}"
+    versionName = "${mod_display_name} ${mc_version}-${version}"
+    changelog = rootProject.file("CHANGELOG.md").text
+    uploadFile = jar
+    debugMode = Boolean.parseBoolean("${uploadDebug}")
 }
