@@ -229,7 +229,7 @@ curseforge {
 
 modrinth {
     token = "${modrinthToken}"
-    projectId = "${modrinth_project_it}"
+    projectId = "${modrinth_project_id}"
     versionNumber = "${mc_version}-${version}"
     versionName = "${mod_display_name} ${mc_version}-${version}"
     changelog = rootProject.file("CHANGELOG.md").text
