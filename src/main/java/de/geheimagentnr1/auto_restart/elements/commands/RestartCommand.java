@@ -23,7 +23,7 @@ public class RestartCommand {
 	private static int restart( CommandContext<CommandSourceStack> context ) {
 		
 		CommandSourceStack source = context.getSource();
-		source.sendSuccess( Component.literal( "Restarting the server" ), true );
+		source.sendSuccess( () -> Component.literal( "Restarting the server" ), true );
 		ServerRestarter.restart( source.getServer() );
 		return Command.SINGLE_SUCCESS;
 	}
