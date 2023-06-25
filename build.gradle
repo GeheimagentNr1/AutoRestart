@@ -174,6 +174,14 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        name "local-test-repo"
+        url local_repository_path
+    }
+    maven {
+        name "minecraft-mods-repo"
+        url "https://secretsoft.jfrog.io/artifactory/minecraft-mods/"
+    }
 }
 
 dependencies {
@@ -198,6 +206,20 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    //Lombok
+    compileOnly "org.projectlombok:lombok:${lombok_version}"
+    annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+    testCompileOnly "org.projectlombok:lombok:${lombok_version}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
+    // Minecraft Forge API
+    compileOnly fg.deobf("de.geheimagentnr1.minecraft_forge_api:MinecraftForgeAPI-${minecraft_version}:${mfapi_version}")
+    runtimeOnly fg.deobf("de.geheimagentnr1.minecraft_forge_api:MinecraftForgeAPI-${minecraft_version}:${mfapi_version}:dev")
+    jarJar("de.geheimagentnr1.minecraft_forge_api:MinecraftForgeAPI-${minecraft_version}:[${mfapi_version},${next_unuable_mfapi_version})") {
+        jarJar.pin(it, "${mfapi_version}")
+        transitive = false
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -227,8 +249,19 @@ processResources {
     }
 }
 
+jarJar.enable()
+tasks.jarJar.configure {
+    archiveClassifier = ""
+}
+tasks.jarJar.finalizedBy("reobfJarJar")
+
+reobf {
+    jarJar {}
+}
+
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
+    archiveClassifier = "slim"
     manifest {
         attributes([
                 "Specification-Title"     : mod_id,
@@ -251,13 +284,14 @@ jar.finalizedBy('reobfJar')
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifact jar
+            from components.java
+            jarJar.component(it)
         }
     }
     repositories {
         maven {
             name "local-test-repo"
-            url "file:../ModdingMavenRepositories"
+            url local_repository_path
         }
         maven {
             name "minecraft-mods-repo"
@@ -284,24 +318,26 @@ curseforge {
         if(Boolean.parseBoolean(usableOnServerSide)) {
             addGameVersion 'Server'
         }
-        relations { final relation ->
-            ((List) new JsonSlurper().parseText("${deployment_dependencies}")).forEach { final dependency ->
-                {
-                    switch (dependency.type) {
-                        case "required":
-                            relation.requiredDependency dependency.name
-                            break
-                        case "optional":
-                            relation.optionalDependency dependency.name
-                            break
-                        default:
-                            throw new IllegalStateException("Unknown dependency type")
+        if(((List) new JsonSlurper().parseText("${deployment_dependencies}")).size() > 0) {
+            relations { final relation ->
+                ((List) new JsonSlurper().parseText("${deployment_dependencies}")).forEach { final dependency ->
+                    {
+                        switch (dependency.type) {
+                            case "required":
+                                relation.requiredDependency dependency.name
+                                break
+                            case "optional":
+                                relation.optionalDependency dependency.name
+                                break
+                            default:
+                                throw new IllegalStateException("Unknown dependency type")
+                        }
                     }
                 }
             }
         }
 
-        mainArtifact(jar) {
+        mainArtifact("./build/libs/${rootProject.name}-${version}.jar") {
             it.displayName = "${mod_name} ${minecraft_version}-${version}"
         }
     }
@@ -316,7 +352,7 @@ modrinth {
     versionNumber = "${minecraft_version}-${version}"
     versionName = "${mod_name} ${minecraft_version}-${version}"
     changelog = rootProject.file("CHANGELOG.md").text
-    uploadFile = jar
+    uploadFile = "./build/libs/${rootProject.name}-${version}.jar"
     dependencies {
         ((List) new JsonSlurper().parseText("${deployment_dependencies}")).forEach { final dependency ->
             {

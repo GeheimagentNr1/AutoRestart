@@ -1,5 +1,7 @@
 package de.geheimagentnr1.auto_restart.config;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -21,6 +23,7 @@ public class AutoRestartTime {
 	}
 	
 	//package-private
+	@NotNull
 	static AutoRestartTime build( int hour, int minute ) {
 		
 		return new AutoRestartTime( hour, minute );

@@ -1,5 +1,7 @@
 package de.geheimagentnr1.auto_restart.config;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Locale;
 import java.util.Optional;
 
@@ -9,10 +11,13 @@ public enum TimeUnit {
 	MINUTES,
 	SECONDS;
 	
+	@NotNull
 	private final String plural;
 	
+	@NotNull
 	private final String singular;
 	
+	@NotNull
 	private final String sign;
 	
 	//private
@@ -24,7 +29,8 @@ public enum TimeUnit {
 	}
 	
 	//package-private
-	static Optional<TimeUnit> parse( String timeUnitString ) {
+	@NotNull
+	static Optional<TimeUnit> parse( @NotNull String timeUnitString ) {
 		
 		for( TimeUnit timeUnit : values() ) {
 			if( timeUnit.getSign().equals( timeUnitString ) ) {
@@ -34,12 +40,14 @@ public enum TimeUnit {
 		return Optional.empty();
 	}
 	
-	public String getText( long value ) {
+	@NotNull
+	String getText( long value ) {
 		
 		return value == 1 ? singular : plural;
 	}
 	
-	public String getSign() {
+	@NotNull
+	String getSign() {
 		
 		return sign;
 	}
