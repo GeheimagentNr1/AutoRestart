@@ -5,7 +5,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
-    id("com.jaredsburrows.license") version "0.9.0"
+    id("com.jaredsburrows.license") version "0.9.3"
     id "net.linguica.maven-settings" version "0.5"
     id 'io.github.CDAGaming.cursegradle' version '1.6.1'
     id "com.modrinth.minotaur" version "2.+"
@@ -152,10 +152,6 @@ repositories {
         name "local-test-repo"
         url local_repository_path
     }
-    maven {
-        name "minecraft-mods-repo"
-        url "https://secretsoft.jfrog.io/artifactory/minecraft-mods/"
-    }
 }
 
 dependencies {
@@ -268,10 +264,6 @@ publishing {
         maven {
             name "local-test-repo"
             url local_repository_path
-        }
-        maven {
-            name "minecraft-mods-repo"
-            url "https://secretsoft.jfrog.io/artifactory/minecraft-mods/"
         }
     }
 }
