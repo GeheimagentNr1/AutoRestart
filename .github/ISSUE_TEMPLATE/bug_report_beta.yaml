@@ -1,0 +1,71 @@
+name: Bug Report
+description: File a bug report
+labels: [bug]
+body:
+- type: markdown
+  attributes:
+    value: "# Bug Report Form"
+- type: input
+  id: minecraft-version
+  attributes:
+    label: Minecraft Version
+    description: What Minecraft version are you using?
+    placeholder: ex. 1.20.2
+  validations:
+    required: true
+- type: input
+  id: forge-version
+  attributes:
+    label: Minecraft Forge Version
+    description: What Minecraft Forge version are you using?
+    placeholder: ex. 48.0.40
+  validations:
+    required: true
+- type: input
+  id: mod-version
+  attributes:
+    label: Mod Version
+    description: What Mod Forge version are you using?
+    placeholder: ex. 1.20.2
+  validations:
+    required: true
+- type: textarea
+  id: desc
+  attributes:
+    label: Describe the bug
+    description: A clear and concise description of what the bug is and what happened.
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: Expected behavior
+    description: A clear and concise description of what you expected to happen.
+  validations:
+    required: true
+- type: textarea
+  id: reproduce
+  attributes:
+    label: Steps to reproduce
+    placeholder: |
+      1.
+      2.
+      3.
+      ...
+    description: We need to know how you encountered the bug to properly troubleshoot the issue.
+  validations:
+    required: true
+- type: textarea
+  id: references
+  attributes:
+    label: References (optional)
+    description: If applicable, add log files, screenshots or videos to help explain your problem.
+  validations:
+    required: false
+- type: textarea
+  id: misc
+  attributes:
+    label: Additional info (optional)
+    description: Add any other context about the problem here. Was this working before? When did the issue start occurring?
+  validations:
+    required: false
