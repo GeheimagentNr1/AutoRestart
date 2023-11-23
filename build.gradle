@@ -5,6 +5,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id("com.jaredsburrows.license") version "0.9.3"
     id "net.linguica.maven-settings" version "0.5"
     id 'io.github.CDAGaming.cursegradle' version '1.6.1'
