@@ -69,7 +69,7 @@ public class AutoRestartTask extends TimerTask implements ForgeEventHandlerInter
 		}
 		if( serverConfig.isLowTpsRestartEnabled() ) {
 			boolean foundTpsProblem = false;
-			long[] serverTickTimes = server.tickTimes;
+			long[] serverTickTimes = server.tickTimesNanos;
 			if( TpsHelper.calculateTps( serverTickTimes ) < serverConfig.getLowTpsRestartMinimumTpsLevel() ) {
 				tpsProblemDuration++;
 				foundTpsProblem = true;
