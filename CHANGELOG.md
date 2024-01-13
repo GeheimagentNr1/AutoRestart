@@ -1,1 +1,1 @@
-Ported to 1.20.1 
+- Fix issue, that the auto restart stops working, because of the config not beeing loaded yet.
