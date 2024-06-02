@@ -148,7 +148,7 @@ repositories {
     // }
     maven {
         name "local-test-repo"
-        url local_repository_path
+        url "file:" + project.projectDir.toString() + "/" + local_repository_path
     }
 }
 
@@ -248,7 +248,7 @@ publishing {
     repositories {
         maven {
             name "local-test-repo"
-            url local_repository_path
+            url "file:" + project.projectDir.toString() + "/" + local_repository_path
         }
     }
 }
@@ -279,7 +279,7 @@ curseforge {
     project {
         id = "${curseforge_project_id}"
         changelogType = 'markdown'
-        changelog = rootProject.file('CHANGELOG.md').text
+        changelog = project.file('CHANGELOG.md').text
         releaseType = 'release'
         addGameVersion "${minecraft_version}"
         if(Boolean.parseBoolean(usableOnClientSide)) {
@@ -321,7 +321,7 @@ modrinth {
     projectId = "${modrinth_project_id}"
     versionNumber = "${minecraft_version}-${version}"
     versionName = "${mod_name} ${minecraft_version}-${version}"
-    changelog = rootProject.file("CHANGELOG.md").text
+    changelog = project.file("CHANGELOG.md").text
     uploadFile = "./build/libs/${rootProject.name}-${version}.jar"
     dependencies {
         ((List) new JsonSlurper().parseText("${deployment_dependencies}")).forEach { final dependency ->
