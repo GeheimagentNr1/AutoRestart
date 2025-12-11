@@ -4,7 +4,6 @@ import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
-import de.geheimagentnr1.minecraft_forge_api.elements.commands.CommandInterface;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -14,14 +13,13 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings( "SameReturnValue" )
 @RequiredArgsConstructor
-public class RestartCommand implements CommandInterface {
+public class RestartCommand {
 	
 	
 	@NotNull
 	private final ServerRestarter serverRestarter;
 	
 	@NotNull
-	@Override
 	public LiteralArgumentBuilder<CommandSourceStack> build() {
 		
 		return Commands.literal( "restart" )

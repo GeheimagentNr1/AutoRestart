@@ -2,13 +2,12 @@ package de.geheimagentnr1.auto_restart.util;
 
 import de.geheimagentnr1.auto_restart.AutoRestart;
 import de.geheimagentnr1.auto_restart.config.ServerConfig;
-import de.geheimagentnr1.minecraft_forge_api.events.ForgeEventHandlerInterface;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.event.server.ServerStoppedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +18,7 @@ import java.io.IOException;
 
 @Log4j2
 @RequiredArgsConstructor
-public class ServerRestarter implements ForgeEventHandlerInterface {
+public class ServerRestarter {
 	
 	
 	@NotNull
@@ -101,14 +100,12 @@ public class ServerRestarter implements ForgeEventHandlerInterface {
 	}
 	
 	@SubscribeEvent
-	@Override
 	public void handleServerStartingEvent( @NotNull ServerStartingEvent event ) {
 		
 		createExceptionFile();
 	}
 	
 	@SubscribeEvent
-	@Override
 	public void handleServerStoppedEvent( @NotNull ServerStoppedEvent event ) {
 		
 		if( shouldDoRestart() ) {

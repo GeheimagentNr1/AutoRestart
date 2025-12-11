@@ -5,7 +5,6 @@ import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import de.geheimagentnr1.auto_restart.config.Timing;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import de.geheimagentnr1.auto_restart.util.TpsHelper;
-import de.geheimagentnr1.minecraft_forge_api.events.ForgeEventHandlerInterface;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import net.minecraft.ChatFormatting;
@@ -13,10 +12,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.server.ServerStartedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.server.ServerLifecycleHooks;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -28,7 +27,7 @@ import java.util.TimerTask;
 
 @Log4j2
 @RequiredArgsConstructor
-public class AutoRestartTask extends TimerTask implements ForgeEventHandlerInterface {
+public class AutoRestartTask extends TimerTask {
 	
 	
 	@NotNull
@@ -69,7 +68,7 @@ public class AutoRestartTask extends TimerTask implements ForgeEventHandlerInter
 		}
 		if( serverConfig.isLowTpsRestartEnabled() ) {
 			boolean foundTpsProblem = false;
-			long[] serverTickTimes = server.tickTimesNanos;
+			long[] serverTickTimes = server.getTickTimesNanos();
 			if( TpsHelper.calculateTps( serverTickTimes ) < serverConfig.getLowTpsRestartMinimumTpsLevel() ) {
 				tpsProblemDuration++;
 				foundTpsProblem = true;
@@ -142,21 +141,18 @@ public class AutoRestartTask extends TimerTask implements ForgeEventHandlerInter
 	}
 	
 	@SubscribeEvent
-	@Override
 	public void handleServerStartedEvent( @NotNull ServerStartedEvent event ) {
 		
 		server = event.getServer();
 	}
 	
 	@SubscribeEvent
-	@Override
 	public void handlePlayerLoggedInEvent( @NotNull PlayerEvent.PlayerLoggedInEvent event ) {
 		
 		resetEmptyTime();
 	}
 	
 	@SubscribeEvent
-	@Override
 	public void handlePlayerLoggedOutEvent( @NotNull PlayerEvent.PlayerLoggedOutEvent event ) {
 		
 		if( ServerLifecycleHooks.getCurrentServer().getPlayerList().getPlayers().size() <= 1 ) {
