@@ -6,7 +6,6 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.+'
     id("com.jaredsburrows.license") version "0.9.8"
-    id "net.linguica.maven-settings" version "0.+"
     id 'io.github.CDAGaming.cursegradle' version '1.+'
     id "com.modrinth.minotaur" version "2.+"
 }
