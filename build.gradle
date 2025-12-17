@@ -173,7 +173,7 @@ tasks.withType(JavaCompile).configureEach {
 
 
 curseforge {
-    apiKey = "${curseforgeApiKey}"
+    apiKey = findProperty('curseforgeApiKey') ?: 'dummy'
     project {
         id = "${curseforge_project_id}"
         changelogType = 'markdown'
@@ -216,7 +216,7 @@ curseforge {
 }
 
 modrinth {
-    token = "${modrinthToken}"
+    token = findProperty('modrinthToken') ?: 'dummy'
     projectId = "${modrinth_project_id}"
     gameVersions = ["${minecraft_version}"]
     versionNumber = "${minecraft_version}-${version}"
