@@ -75,7 +75,6 @@ jobs:
 
       - name: Run GameTests
         run: ./gradlew runGameTestServer --no-daemon
-        continue-on-error: true
 
       - name: Upload GameTest Results
         uses: actions/upload-artifact@v4
