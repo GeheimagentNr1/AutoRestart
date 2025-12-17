@@ -2,6 +2,7 @@ package de.geheimagentnr1.auto_restart;
 
 import de.geheimagentnr1.auto_restart.config.ServerConfig;
 import de.geheimagentnr1.auto_restart.elements.commands.RestartCommand;
+import de.geheimagentnr1.auto_restart.elements.gametests.AutoRestartGameTests;
 import de.geheimagentnr1.auto_restart.task.AutoRestartTask;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.neoforged.bus.api.IEventBus;
@@ -22,6 +23,8 @@ public class AutoRestart {
 	public static final String MODID = "auto_restart";
 	
 	public AutoRestart( IEventBus modEventBus, ModContainer modContainer ) {
+		
+		AutoRestartGameTests.TEST_FUNCTIONS.register( modEventBus );
 		
 		if( FMLEnvironment.dist.isDedicatedServer() ) {
 			ServerConfig serverConfig = new ServerConfig();

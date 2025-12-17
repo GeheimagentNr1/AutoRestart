@@ -1,19 +1,36 @@
 package de.geheimagentnr1.auto_restart.elements.gametests;
 
-import net.minecraft.gametest.framework.GameTest;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTestHelper;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.event.RegisterGameTestsEvent;
 
-@GameTestHolder( "auto_restart" )
-@PrefixGameTestTemplate( false )
+import java.util.function.Consumer;
+
+@EventBusSubscriber( modid = "auto_restart", bus = EventBusSubscriber.Bus.MOD )
 public class AutoRestartGameTests {
 
-    @GameTest( template = "floor_3x3x3", templateNamespace = "neoforge" )
-    public void modLoadsSuccessfully( GameTestHelper helper ) {
+    public static final DeferredRegister<Consumer<GameTestHelper>> TEST_FUNCTIONS = DeferredRegister.create(
+        BuiltInRegistries.TEST_FUNCTION,
+        "auto_restart"
+    );
 
-        // Simple test to verify the mod loads correctly
-        // This test passes immediately since we just need to verify the mod is loaded
+    public static final DeferredHolder<Consumer<GameTestHelper>, Consumer<GameTestHelper>> MOD_LOADS = TEST_FUNCTIONS.register(
+        "mod_loads_successfully",
+        () -> AutoRestartGameTests::modLoadsSuccessfully
+    );
+
+    public static void modLoadsSuccessfully( GameTestHelper helper ) {
+
         helper.succeed();
+    }
+
+    @SubscribeEvent
+    public static void registerTests( RegisterGameTestsEvent event ) {
+
+        event.register( MOD_LOADS.get() );
     }
 }
