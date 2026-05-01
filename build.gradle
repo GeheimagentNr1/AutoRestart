@@ -178,7 +178,9 @@ curseforge {
         changelogType = 'markdown'
         changelog = project.file('CHANGELOG.md').text
         releaseType = 'release'
-        addGameVersion "${minecraft_version}"
+        ((List) new JsonSlurper().parseText("${minecraft_versions}")).forEach { final version ->
+            addGameVersion version
+        }
         addGameVersion 'NeoForge'
         if(Boolean.parseBoolean(usableOnClientSide)) {
             addGameVersion 'Client'
@@ -217,7 +219,7 @@ curseforge {
 modrinth {
     token = findProperty('modrinthToken') ?: 'dummy'
     projectId = "${modrinth_project_id}"
-    gameVersions = ["${minecraft_version}"]
+    gameVersions = (List) new JsonSlurper().parseText("${minecraft_versions}")
     versionNumber = "${minecraft_version}-${version}"
     versionName = "${mod_name} ${minecraft_version}-${version}"
     changelog = project.file("CHANGELOG.md").text

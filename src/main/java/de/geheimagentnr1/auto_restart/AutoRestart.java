@@ -9,7 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +26,7 @@ public class AutoRestart {
 		
 		AutoRestartGameTests.TEST_FUNCTIONS.register( modEventBus );
 		
-		if( FMLEnvironment.dist.isDedicatedServer() ) {
+		if( FMLLoader.getDist().isDedicatedServer() ) {
 			ServerConfig serverConfig = new ServerConfig();
 			modContainer.registerConfig( ModConfig.Type.SERVER, serverConfig.getSpec() );
 			
