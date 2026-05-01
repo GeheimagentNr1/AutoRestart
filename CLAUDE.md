@@ -1,4 +1,4 @@
-# AGENTS.md - Auto Restart
+# CLAUDE.md - Auto Restart
 
 ## Projekt-Übersicht
 
