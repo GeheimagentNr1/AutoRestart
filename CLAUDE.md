@@ -37,7 +37,7 @@ src/main/java/de/geheimagentnr1/auto_restart/
 
 ## Besonderheiten
 
-- **Server-Only**: `usableOnClientSide=false` - nur für dedizierte Server
+- **Server-Only**: `@Mod( value = MODID, dist = Dist.DEDICATED_SERVER )` — lädt nur auf dedizierten Servern
 - **Scheduled Tasks**: Automatische Neustarts zu konfigurierten Zeiten
 - **TPS-Monitoring**: Kann TPS überwachen
 
@@ -108,3 +108,7 @@ Der Workflow `.github/workflows/build-and-test.yml` führt automatisch aus:
 | Block/Item-Verhalten | ✅ | GameTest |
 | Server-Restart | ⚠️ Eingeschränkt | - |
 | Multi-MC-Version | ⚠️ Pro Branch | CI Matrix |
+
+## Referenzen
+
+- [NeoForge Migration Primer](https://docs.neoforged.net/primer/docs/) — Dokumentiert API-Aenderungen zwischen Minecraft/NeoForge-Versionen; nuetzlich fuer die Pruefung von Breaking Changes beim Upgrade auf neue Versionen
