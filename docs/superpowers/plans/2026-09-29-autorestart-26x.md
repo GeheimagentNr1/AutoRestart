@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - Branch: `develop_26.1` im Repo `C:\MinecraftModding\ActiveMods\AutoRestart`.
-- Kompilierbasis: `neoforge_version=26.1.0.19-beta`, `minecraft_version=26.1`, `minecraft_version_range=[26.1,26.4)`.
+- Kompilierbasis: `neoforge_version=26.1.0.19-beta`, `minecraft_version=26.1`, `minecraft_version_range=[26.1,27)`.
 - Java 25: `C:\Program Files\Eclipse Adoptium\jdk-25.0.4.7-hotspot`.
 - NeoForge-Regel: neuester Stable-Build, sonst neuester Beta-Build. Matrix: 26.1 -> `26.1.0.19-beta`, 26.1.1 -> `26.1.1.15-beta`, 26.1.2 -> `26.1.2.112`, 26.2 -> `26.2.0.88`, 26.3 -> `26.3.0.36-beta`.
 - Testpack-Ordner: `C:\MinecraftModding\Testpacks\TestPack <ver>`. Client: `J:\software\Overwolf\Minecraft\Instances\Testpack <ver>`.
@@ -54,7 +54,7 @@ Expected: Liste aller Imports, die gegen den Primer geprüft werden.
 
 ```properties
 minecraft_version=26.1
-minecraft_version_range=[26.1,26.4)
+minecraft_version_range=[26.1,27)
 minecraft_versions=["26.1","26.1.1","26.1.2","26.2","26.3"]
 neoforge_version=26.1.0.19-beta
 neoforge_version_range=[26.1,)
@@ -95,7 +95,7 @@ Expected: `TimeUnitTest`, `TimingTest`, `TpsHelperTest` PASS. Bei Fehlschlag Urs
 - [ ] **Step 7: Jar-Datei und Inhalt prüfen**
 
 Run: `ls build/libs` und `unzip -p build/libs/*.jar META-INF/neoforge.mods.toml | grep versionRange`
-Expected: Jar vorhanden, `versionRange="[26.1,)"` für NeoForge und `"[26.1,26.4)"` für Minecraft.
+Expected: Jar vorhanden, `versionRange="[26.1,)"` für NeoForge und `"[26.1,27)"` für Minecraft.
 
 - [ ] **Step 8: Commit**
 
@@ -115,7 +115,7 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 
 **Interfaces:**
 - Consumes: kompilierender Stand aus Task 1.
-- Produces: pro NeoForge-Version Ergebnis `OK`/`FAIL` mit Fehlertext. Das entscheidet, ob `minecraft_version_range=[26.1,26.4)` bleibt.
+- Produces: pro NeoForge-Version Ergebnis `OK`/`FAIL` mit Fehlertext. Das entscheidet, ob `minecraft_version_range=[26.1,27)` bleibt.
 
 - [ ] **Step 1: Gegen alle Zielversionen bauen**
 

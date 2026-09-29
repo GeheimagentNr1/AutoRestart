@@ -23,7 +23,7 @@ Die Liste wird vor dem Anlegen erneut gegen `https://maven.neoforged.net/api/mav
 ## 1. Code-Port
 
 - **Kompilierbasis ist die niedrigste Version** (`26.1.0.19-beta`, `minecraft_version=26.1`), damit nur APIs genutzt werden, die in allen Zielversionen existieren. Gegen 26.1.2 zu kompilieren würde nur 26.1.2 bis 26.3 garantieren.
-- `minecraft_version_range=[26.1,26.4)`, `minecraft_versions` als JSON-Array aller Zielversionen.
+- `minecraft_version_range=[26.1,27)`, `minecraft_versions` als JSON-Array aller Zielversionen.
 - Java: Toolchain in `build.gradle` auf 25 (`jdk-25.0.4.7-hotspot`). Ob 26.1.0 schon Java 25 braucht, wird beim ersten Build geprüft, Ergebnis fließt in die Start-Skripte.
 - Plugin `net.neoforged.moddev` (aktuell `2.0.+`) auf Kompatibilität mit 26.x prüfen.
 - Vorgehen: NeoForge-Primer für 26.1 gegen die tatsächlich genutzten APIs abgleichen (Commands/Permissions, Server-Stop, Tick-Events, Config, `@Mod`), Compile-Fehler iterativ beheben. Root-`CLAUDE.md` und `Docs/migrations/` zuerst prüfen.
