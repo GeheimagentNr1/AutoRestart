@@ -23,7 +23,7 @@ public class RestartCommand {
 	public LiteralArgumentBuilder<CommandSourceStack> build() {
 		
 		return Commands.literal( "restart" )
-			.requires( source -> source.hasPermission( 4 ) )
+			.requires( Commands.hasPermission( Commands.LEVEL_OWNERS ) )
 			.executes( this::restart );
 	}
 	
