@@ -4,7 +4,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.+'
+    id 'net.neoforged.moddev' version '2.0.147'
     id("com.jaredsburrows.license") version "0.9.8"
     id 'io.github.CDAGaming.cursegradle' version '1.+'
     id "com.modrinth.minotaur" version "2.+"
@@ -33,8 +33,8 @@ copyLicenses.dependsOn("licenseReport")
 
 apply from: "custom.gradle"
 
-// Mojang ships Java 21 to end users in 1.20.5+, so your mod should target Java 21.
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+// Minecraft 26.x requires Java 25, so the mod targets Java 25.
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
@@ -91,7 +91,7 @@ repositories {
     // }
     maven {
         name "local-test-repo"
-        url "file:" + project.projectDir.toString() + "/" + local_repository_path
+        url file( local_repository_path ).toURI()
     }
 }
 
@@ -161,7 +161,7 @@ publishing {
     repositories {
         maven {
             name "local-test-repo"
-            url "file:" + project.projectDir.toString() + "/" + local_repository_path
+            url file( local_repository_path ).toURI()
         }
     }
 }
