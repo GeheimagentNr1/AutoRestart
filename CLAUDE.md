@@ -5,7 +5,7 @@
 **Auto Restart** ist ein NeoForge Minecraft Mod, aktuell mit drei aktiven Branches:
 - `master`/`develop_1.21.1` - Minecraft 1.21.1, NeoForge 21.1.x
 - `develop_1.21.11` - Minecraft 1.21.11, NeoForge 21.11.x (seit 2026-09-29, siehe [`../Docs/migrations/1.21.10-to-1.21.11.md`](../Docs/migrations/1.21.10-to-1.21.11.md))
-- `develop_26.1` - Minecraft 26.1 - 26.3, NeoForge 26.x, Java 25. Ein Jar, kompiliert gegen NeoForge 26.1.0.19-beta, Range `[26.1,26.4)`, siehe [`../Docs/migrations/1.21.11-to-26.1.md`](../Docs/migrations/1.21.11-to-26.1.md)
+- `develop_26.1` - Minecraft 26.1 - 26.3, NeoForge 26.x, Java 25. Ein Jar, kompiliert gegen NeoForge 26.1.0.19-beta, Range `[26.1,27)`, siehe [`../Docs/migrations/1.21.11-to-26.1.md`](../Docs/migrations/1.21.11-to-26.1.md)
 
 - **Mod ID**: `auto_restart`
 - **Package**: `de.geheimagentnr1.auto_restart`
