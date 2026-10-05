@@ -59,7 +59,8 @@ jobs:
         run: |
           args="-Dorg.gradle.java.home=$JAVA_HOME"
           if [ -d .ci-maven ]; then
-            args="$args -Plocal_repository_path=$GITHUB_WORKSPACE/.ci-maven"
+            # relative: older branches build the URL as "file:" + projectDir + "/" + local_repository_path
+            args="$args -Plocal_repository_path=.ci-maven"
           fi
           echo "GRADLE_ARGS=$args" >> "$GITHUB_ENV"
 
@@ -68,7 +69,7 @@ jobs:
 
       - name: Run GameTests
         run: |
-          if find src/main/java -path '*gametests*' -name '*.java' | grep -q .; then
+          if grep -q 'gameTestServer' build.gradle && find src/main/java -path '*gametests*' -name '*.java' | grep -q .; then
             ./gradlew runGameTestServer --no-daemon $GRADLE_ARGS
           else
             echo "No GameTests in this branch"
