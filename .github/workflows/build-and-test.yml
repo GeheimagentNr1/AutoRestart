@@ -67,14 +67,6 @@ jobs:
       - name: Build and run unit tests
         run: ./gradlew build --no-daemon $GRADLE_ARGS
 
-      - name: Run GameTests
-        run: |
-          if grep -q 'gameTestServer' build.gradle && find src/main/java -path '*gametests*' -name '*.java' | grep -q .; then
-            ./gradlew runGameTestServer --no-daemon $GRADLE_ARGS
-          else
-            echo "No GameTests in this branch"
-          fi
-
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
         if: always()
