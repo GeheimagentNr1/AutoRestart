@@ -72,7 +72,7 @@ public class ServerConfig {
 			.comment( "Is the server started by an external restart script?" )
 			.define( "use_external_restart_script", false );
 		restartCommand = builder
-			.comment( "Command that is executed on Server stopped to restart the server. Only called if \"use_external_restart_script\" is false." )
+			.comment( "Path of the script, that is executed on Server stopped to restart the server. Only the path, without arguments or other commands (e.g. \"/opt/minecraft/start.sh\"). Only called if \"use_external_restart_script\" is false." )
 			.define( "restart_command", "" );
 		builder.pop();
 		
