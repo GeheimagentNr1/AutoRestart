@@ -55,9 +55,21 @@ public class AutoRestartTask extends TimerTask implements ForgeEventHandlerInter
 	@Override
 	public void run() {
 		
-		if( server == null && isRestartRunning ) {
+		// The timer starts 60 seconds after the mod construction, the server may not be started yet.
+		// After a restart has been triggered, nothing has to be checked anymore.
+		if( server == null || isRestartRunning ) {
 			return;
 		}
+		try {
+			checkRestart();
+		} catch( RuntimeException exception ) {
+			// An uncaught exception would stop the timer and with it all following automatic restarts.
+			log.error( "Check for automatic restart failed", exception );
+		}
+	}
+	
+	private void checkRestart() {
+		
 		LocalDateTime current_time = LocalDateTime.now();
 		if( serverConfig.getOnEmptyRestartEnabled() && empty_time != null ) {
 			if( Duration.between( empty_time, current_time ).getSeconds() >=
