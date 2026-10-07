@@ -106,7 +106,7 @@ public class ServerConfig extends AbstractConfig {
 		);
 		registerConfigValue(
 			String.format(
-				"Command that is executed on Server stopped to restart the server. Only called if \"%s\" is false.",
+				"Path of the script, that is executed on Server stopped to restart the server. Only the path, without arguments or other commands (e.g. \"/opt/minecraft/start.sh\"). Only called if \"%s\" is false.",
 				USES_EXTERNAL_RESTART_SCRIPT_KEY
 			),
 			RESTART_COMMAND_KEY,
