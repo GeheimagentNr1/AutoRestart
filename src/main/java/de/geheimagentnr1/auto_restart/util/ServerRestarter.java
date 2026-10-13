@@ -59,7 +59,7 @@ public class ServerRestarter {
 		try {
 			LOGGER.info( "Saving restart status \"{}\" to file", type );
 			File file = new File( "." + File.separator + AutoRestart.MODID + File.separator + "restart" );
-			if( file.exists() || file.getParentFile().mkdirs() && file.createNewFile() ) {
+			if( file.exists() || ( file.getParentFile().isDirectory() || file.getParentFile().mkdirs() ) && file.createNewFile() ) {
 				fileWriter = new FileWriter( file );
 				fileWriter.write( String.valueOf( type.ordinal() - 1 ) );
 				fileWriter.flush();
