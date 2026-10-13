@@ -35,7 +35,7 @@ Diese Datei ist auf allen `develop_*`-Branches identisch; Quelle: `../Docs/mod-c
 ## Fallstricke
 
 - **Timer darf nicht sterben**: `AutoRestartTask.run()` fängt `RuntimeException`, wartet auf den gestarteten Server und prüft nicht mehr, sobald ein Neustart läuft oder der Server stoppt (Config ist dann entladen). Gefixt in 3.0.2 bzw. Forge `1.20.1-2.0.3` (vorher: Timer tot vor Serverstart, doppelte Neustarts).
-- **`auto_restart/` nicht vorab anlegen**: `saveToFile` meldet „Restart File could not be created“, wenn das Verzeichnis existiert, die Datei aber nicht (`file.exists() || mkdirs() && createNewFile()`), ungefixt.
+- **Statusdatei `auto_restart/restart`**: bis einschließlich 3.0.2/2.0.3 wurde sie nicht angelegt, wenn der Ordner schon existierte (`mkdirs()` liefert dann `false`). Seit 2026-10-13 auf allen Branches gefixt (`isDirectory() || mkdirs()`), noch nicht released.
 - **Kein Docker**: der Mod startet den eigenen Server-Prozess neu, das kollidiert mit dem Container-Lifecycle - nur nativ testen ([`../Docs/testing/docker-vs-native.md`](../Docs/testing/docker-vs-native.md)).
 - GameTest-Smoke-Test `elements/gametests/AutoRestartGameTests` nur auf `develop_1.21.1`; ab 1.21.11 ersatzlos gestrichen (Annotation-GameTests entfernt); Unit-Tests für `Timing`, `TimeUnit`, `TpsHelper` laufen auf allen NeoForge-Branches.
 - Rechte-Umbau 1.21.11: [`../Docs/migrations/1.21.10-to-1.21.11.md`](../Docs/migrations/1.21.10-to-1.21.11.md); Tooling 26.1 (Gradle 9.2.1, Lombok 1.18.48): [`../Docs/migrations/1.21.11-to-26.1.md`](../Docs/migrations/1.21.11-to-26.1.md).
