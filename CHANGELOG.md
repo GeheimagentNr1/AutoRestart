@@ -1,3 +1,1 @@
-﻿Fix scheduled, empty server and low TPS restarts not working at all, if the server needs more than 60 seconds to start (the restart timer stopped after an error)
-Fix the restart being triggered again every second during the restart minute
-Fix an error being logged every second while the server is stopping
+- Fix the restart status file `auto_restart/restart` not being created, if the `auto_restart` folder already exists but the file does not (e.g. after deleting the file)
