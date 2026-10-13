@@ -6,7 +6,7 @@ Diese Datei ist auf allen `develop_*`-Branches identisch; Quelle: `../Docs/mod-c
 
 ## Versionen
 
-- Forge: `develop_1.14.4` .. `develop_1.21`, `develop_1.21.1_forge` (letzter Forge-Stand 1.21.1); `develop_1.21.3` ist ein unveröffentlichter Forge-Versuch.
+- Forge: `develop_1.14.4` .. `develop_1.21`, `develop_1.21.1_forge` (letzter Forge-Stand 1.21.1).
 - NeoForge: drei Jars - `develop_1.21.1` (1.21.1 - 1.21.10), `develop_1.21.11` (nur 1.21.11, `hasPermission(int)` entfernt) und `develop_26.1` (ein Jar 26.1 - 26.3, keine Java-Änderungen gegenüber 1.21.11).
 - Ranges, Tags und Java-Versionen pro Branch: [`../Docs/VERSIONEN.md`](../Docs/VERSIONEN.md).
 
