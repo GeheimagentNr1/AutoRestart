@@ -35,7 +35,8 @@ Diese Datei ist auf allen `develop_*`-Branches identisch; Quelle: `../Docs/mod-c
 ## Fallstricke
 
 - **Timer darf nicht sterben**: `AutoRestartTask.run()` fängt `RuntimeException`, wartet auf den gestarteten Server und prüft nicht mehr, sobald ein Neustart läuft oder der Server stoppt (Config ist dann entladen). Gefixt in 3.0.2 bzw. Forge `1.20.1-2.0.3` (vorher: Timer tot vor Serverstart, doppelte Neustarts).
-- **Statusdatei `auto_restart/restart`**: bis einschließlich 3.0.2/2.0.3 wurde sie nicht angelegt, wenn der Ordner schon existierte (`mkdirs()` liefert dann `false`). Seit 2026-10-13 auf allen Branches gefixt (`isDirectory() || mkdirs()`), noch nicht released.
+- **Statusdatei `auto_restart/restart`**: bis 3.0.2/2.0.3 wurde sie nicht angelegt, wenn der Ordner schon existierte (`mkdirs()` liefert dann `false`, Log „Restart File could not be created“). Gefixt auf allen Branches (`isDirectory() || mkdirs()`), released in 3.0.3 (1.21.1, 1.21.11, 26.1) und 2.0.4 (Forge 1.20.1) am 2026-10-13.
+- **RCON nach `/restart`**: `restart_command` startet den neuen Server in `ServerStoppedEvent`, während der alte Prozess noch herunterfährt (DiscordIntegration wartet bis zu 10 s auf JDA). Hält der alte Prozess den RCON-Port noch, läuft der neue Server ohne RCON (`Unable to initialise RCON ... Address already in use`). Gesehen 2026-10-13 auf 1.21.11/26.x mit DiscordIntegration im Pack; offen, siehe `../Docs/feedback/OFFENE_PUNKTE.md`.
 - **Kein Docker**: der Mod startet den eigenen Server-Prozess neu, das kollidiert mit dem Container-Lifecycle - nur nativ testen ([`../Docs/testing/docker-vs-native.md`](../Docs/testing/docker-vs-native.md)).
 - GameTest-Smoke-Test `elements/gametests/AutoRestartGameTests` nur auf `develop_1.21.1`; ab 1.21.11 ersatzlos gestrichen (Annotation-GameTests entfernt); Unit-Tests für `Timing`, `TimeUnit`, `TpsHelper` laufen auf allen NeoForge-Branches.
 - Rechte-Umbau 1.21.11: [`../Docs/migrations/1.21.10-to-1.21.11.md`](../Docs/migrations/1.21.10-to-1.21.11.md); Tooling 26.1 (Gradle 9.2.1, Lombok 1.18.48): [`../Docs/migrations/1.21.11-to-26.1.md`](../Docs/migrations/1.21.11-to-26.1.md).
@@ -43,6 +44,7 @@ Diese Datei ist auf allen `develop_*`-Branches identisch; Quelle: `../Docs/mod-c
 ## Testen
 
 - `restart_command` muss pro Testpack auf dessen eigene `start.cmd` zeigen; leer = `/restart` stoppt nur. In älteren Packs stehen noch Testwerte (u. a. Leer-Server-Neustart nach 2 Minuten) - automatisierte Tests ohne Spieler kurz halten oder vorher per RCON stoppen. `pack.sh` schaltet den Leerlauf-Neustart in Forge-Packs ab.
+- Fehlerfall der Statusdatei: `auto_restart/restart` löschen, Ordner stehen lassen, Server starten - die Datei muss mit `-1` entstehen. Nach `/restart` kann der neu gestartete Server ohne RCON laufen (siehe Fallstricke) - dann das Server-Fenster normal schließen (`taskkill /PID <pid>` ohne `/F`), Minecraft speichert und schreibt `0`.
 - Prüfen: `/restart` per RCON → Server stoppt und startet über `start.cmd` neu; geplante Zeit → Warnungen im Chat, genau **ein** Neustart; `auto_restart/restart` enthält danach den erwarteten Wert. Low-TPS ist praktisch nicht manuell testbar.
 - `../Docs/testing/tools/neoforge_smoke_all.sh` prüft an den Jar-Grenzen einen geplanten Neustart (muss genau einmal passieren).
 - Allgemeine Regeln: [`../Docs/testing/README.md`](../Docs/testing/README.md).
