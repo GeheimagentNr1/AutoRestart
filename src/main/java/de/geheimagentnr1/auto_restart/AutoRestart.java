@@ -1,13 +1,13 @@
 package de.geheimagentnr1.auto_restart;
 
 import de.geheimagentnr1.auto_restart.config.ServerConfig;
+import de.geheimagentnr1.auto_restart.config.ServerConfigRegistration;
 import de.geheimagentnr1.auto_restart.elements.commands.RestartCommand;
 import de.geheimagentnr1.auto_restart.task.AutoRestartTask;
 import de.geheimagentnr1.auto_restart.util.ServerRestarter;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +23,7 @@ public class AutoRestart {
 	public AutoRestart( ModContainer modContainer ) {
 		
 		ServerConfig serverConfig = new ServerConfig();
-		modContainer.registerConfig( ModConfig.Type.SERVER, serverConfig.getSpec() );
+		ServerConfigRegistration.register( modContainer, serverConfig.getSpec() );
 
 		ServerRestarter serverRestarter = new ServerRestarter( serverConfig );
 		NeoForge.EVENT_BUS.register( serverRestarter );
