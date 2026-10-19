@@ -7,7 +7,7 @@ Diese Datei ist auf allen `develop_*`-Branches identisch; Quelle: `../Docs/mod-c
 ## Versionen
 
 - Forge: `develop_1.14.4` .. `develop_1.21`, `develop_1.21.1_forge` (letzter Forge-Stand 1.21.1).
-- NeoForge: drei Jars - `develop_1.21.1` (1.21.1 - 1.21.10), `develop_1.21.11` (nur 1.21.11, `hasPermission(int)` entfernt) und `develop_26.1` (ein Jar 26.1 - 26.3, keine Java-Änderungen gegenüber 1.21.11).
+- NeoForge: vier Jars - `develop_1.21.1` (1.21.1 - 1.21.10), `develop_1.21.11` (nur 1.21.11, `hasPermission(int)` entfernt) und `develop_26.1` (26.1 - 26.2, keine Java-Änderungen gegenüber 1.21.11), `develop_26.3` (ab NeoForge 26.3.0.37-beta: Config-Typ `SYNCED` statt `SERVER` mit altem Dateinamen `<modid>-server.toml`, alte `world/serverconfig/`-Datei wird auf Dedicated Servern einmalig nach `world/syncedconfig/` kopiert - `config/ServerConfigRegistration`, `config/LegacyServerConfigMigration`, 2026-10-19).
 - Ranges, Tags und Java-Versionen pro Branch: [`../Docs/VERSIONEN.md`](../Docs/VERSIONEN.md).
 
 ## Abhängigkeiten
